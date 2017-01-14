@@ -1,0 +1,29 @@
+".source.js, .source.jsx, .source.ts":
+  "setTimeout":
+    prefix: "st"
+    body: """
+    setTimeout(() => {
+      ${0}
+    }, ${1:delay})
+    """
+  "process.nextTick":
+    prefix: "nt"
+    body: """
+    process.nextTick(() => {
+      ${0}
+    }${1:, args})
+    """
+  "setInterval":
+    prefix: "si"
+    body: """
+    setInterval(() => {
+      ${0}
+    }, ${1:delay})
+    """
+  "setImmediate":
+    prefix: "sim"
+    body: """
+    setImmediate(() => {
+      ${0}
+    })
+    """

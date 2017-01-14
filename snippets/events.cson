@@ -1,0 +1,21 @@
+".source.js, .source.jsx, .source.ts":
+  "on event handler":
+    prefix: "on"
+    body: "${1:emitter}.on('${2:event}', ${3:args})"
+  "chain .on":
+    prefix: ".on"
+    body: ".on('${1:event}', ${2:handler})"
+
+  "once event handler":
+    prefix: "once"
+    body: "${1:emitter}.once('${2:event}', ${3:args})"
+  "chain .once":
+    prefix: ".once"
+    body: ".once('${1:event}', ${2:handler})"
+
+  "emit event":
+    prefix: "emit"
+    body: "${1:emitter}.emit('${2:event}', ${3:args})"
+  "chain .emit":
+    prefix: ".emit"
+    body: ".emit('${1:event}', ${2:args})"

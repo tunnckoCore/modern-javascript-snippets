@@ -1,0 +1,19 @@
+".source.js, .source.jsx, .source.ts":
+  "key/value pair":
+    prefix: "kv"
+    body: "${1:key}: ${2:'value'}"
+  "prototype method":
+    prefix: "proto"
+    body: "${1:ClassName}.prototype.${2:key} = ${3:value}"
+  "chain prototype method":
+    prefix: ".proto"
+    body: ".prototype.${2:key} = ${3:value}"
+  "extend-shallow":
+    prefix: "xa"
+    body: "extend(${1:defaults}, ${2:sources})${0}"
+  "Object.assign":
+    prefix: "oa"
+    body: "Object.assign(${1:dest}, ${2:source})${0}"
+  "Object.keys":
+    prefix: "ok"
+    body: "Object.keys(${1:obj})${0}"

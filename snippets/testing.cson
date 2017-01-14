@@ -1,0 +1,22 @@
+".source.js, .source.jsx, .source.ts":
+  "async test (mocha/mukla)":
+    prefix: "ita"
+    body: """
+    ${1:it}('${2:description}', (${3:done}) => {
+    \t${0}
+    })
+    """
+  "synchronous test (mocha/mukla)":
+    prefix: "its"
+    body: """
+    ${1:it}('${2:description}', () => {
+    \t${0}
+    })
+    """
+  "tape-style test":
+    prefix: "te"
+    body: """
+    ${1:test}('${2:description}', (${3:t}) => {
+    \t${0}
+    })
+    """

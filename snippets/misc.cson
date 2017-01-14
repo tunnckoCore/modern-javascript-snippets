@@ -1,0 +1,53 @@
+".source.js, .source.jsx, .source.ts":
+  "use strict":
+    prefix: "us"
+    body: "'use strict'"
+  "const self this":
+    prefix: "self"
+    body: "const self = this"
+  "yield":
+    prefix: "ye"
+    body: "yield ${0}"
+  "await":
+    prefix: "aw"
+    body: "await ${0}"
+  "process.exit":
+    prefix: "pe"
+    body: "process.exit(${1:code})${0}"
+
+  "throw new error":
+    prefix: "thn"
+    body: "throw new ${1:TypeError}('${2:message}')${3}"
+  "if not typeof then throw error":
+    prefix: "iferr"
+    body: """
+    if (typeof ${1:actual} !== ${2:expected}) {
+      throw new ${3:TypeError}('${4:message}')
+    }${5}
+    """
+
+  "JSON.stringify()":
+    prefix: "js"
+    body: "JSON.stringify($0)"
+  "JSON.parse()":
+    prefix: "jp"
+    body: "JSON.parse($0)"
+
+  "arrayify":
+    prefix: "afi"
+    body: """
+    /* istanbul ignore next */
+    const arrayify = (val) => {
+      if (!val) return []
+      if (Array.isArray(val)) return val
+      return [val]
+    }
+    """
+
+  "fixture (useful for assert.throws)":
+    prefix: "fixture"
+    body: """
+    function fixture () {
+      ${1:fnName}
+    }${0}
+    """

@@ -1,0 +1,19 @@
+".source.js, .source.jsx, .source.ts":
+  "require module":
+    prefix: "req"
+    body: "require('${1:pkg}')${0}"
+  "const require package":
+    prefix: "rr"
+    body: "const ${2:name} = require('${1:pkg}')${0}"
+  "exports.member":
+    prefix: "em"
+    body: "exports.${1:member} = ${2:value}"
+  "exports default":
+    prefix: "emd"
+    body: "exports['default'] = ${1:value}"
+  "module.exports":
+    prefix: "me"
+    body: "module.exports = ${1:value}"
+  "module exports and exports default":
+    prefix: "med"
+    body: "module.exports = exports['default'] = ${1:value}"

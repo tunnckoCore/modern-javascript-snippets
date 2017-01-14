@@ -1,0 +1,43 @@
+".source.js, .source.jsx, .source.ts":
+  "for loop":
+    prefix: "fl"
+    body: """
+    for (let ${1:i} = 0; ${1:i} < ${2:iterable}${3:.length}; ${1:i}++) {
+      ${4}
+    }
+    """
+  "for in loop":
+    prefix: "fi"
+    body: """
+    for (let ${1:key} in ${2:source}) {
+      if (${2:source}.hasOwnProperty(${1:key})) {
+        ${3}
+      }
+    }
+    """
+  "for of loop":
+    prefix: "fo"
+    body: """
+    for (let ${1:key} of ${2:source}) {
+      ${3}
+    }
+    """
+
+  "while loop":
+    prefix: "wl"
+    body: """
+    while (${1:condition}) {
+      ${2}
+    }
+    """
+  "fast while loop":
+    prefix: "wf"
+    body: """
+    let len = ${1:iterable}.length
+    let i = 0
+
+    while (i < len) {
+      let val = ${1:iterable}[${2:i++}]
+      ${0}
+    }
+    """

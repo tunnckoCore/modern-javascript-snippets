@@ -1,0 +1,41 @@
+".source.js, .source.jsx, .source.ts":
+  "String":
+    prefix: "S"
+    body: "String"
+  "Symbol":
+    prefix: "Sy"
+    body: "Symbol('${1:name}')"
+  "Boolean":
+    prefix: "B"
+    body: "Boolean"
+  "Number":
+    prefix: "N"
+    body: "Number"
+  "Object":
+    prefix: "O"
+    body: "Object"
+  "Array":
+    prefix: "A"
+    body: "Array"
+  "Date":
+    prefix: "D"
+    body: "Date"
+  "RegExp":
+    prefix: "Rx"
+    body: "RegExp"
+  "Promise":
+    prefix: "P"
+    body: "Promise"
+
+  "typeof equal to":
+    prefix: "tof"
+    body: "typeof ${1:source} === '${2:value}'"
+  "typeof not equal to":
+    prefix: "tofi"
+    body: "typeof ${1:source} !== '${2:value}'"
+  "instanceof":
+    prefix: "iof"
+    body: "${1:source} instanceof ${2:Object}"
+  "Array.isArray()":
+    prefix: "ia"
+    body: "Array.isArray(${1:source})"

@@ -1,0 +1,16 @@
+".source.js, .source.jsx, .source.ts":
+  "module export":
+    prefix: "ex"
+    body: "export ${1:member}"
+  "module default export":
+    prefix: "exd"
+    body: "export default ${1:member}"
+  "import module":
+    prefix: "im"
+    body: "import ${2:name} from '${1:pkg}'${3}"
+  "import module as":
+    prefix: "ima"
+    body: "import ${2:*} as ${3:name} from '${1:pkg}'${4}"
+  "import module destructured":
+    prefix: "imd"
+    body: "import { $2 } from '${1:pkg}'${3}"

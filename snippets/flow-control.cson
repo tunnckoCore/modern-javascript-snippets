@@ -1,0 +1,61 @@
+".source.js, .source.jsx, .source.ts":
+  "if statement":
+    prefix: "if"
+    body: """
+    if (${1:condition}) {
+      ${2}
+    }
+    """
+  "else statement":
+    prefix: "el"
+    body: """
+    else {
+      ${1}
+    }
+    """
+  "if/else statement":
+    prefix: "ife"
+    body: """
+    if (${1:condition}) {
+      ${2}
+    } else {
+      ${3}
+    }
+    """
+  "else if statement":
+    prefix: "ei"
+    body: """
+    else if (${1:condition}) {
+      ${2}
+    }
+    """
+
+  "try/catch":
+    prefix: "tc"
+    body: """
+    try {
+      ${1}
+    } catch (${2:err}) {
+      ${3}
+    }
+    """
+  "try/finally":
+    prefix: "tf"
+    body: """
+    try {
+      ${1}
+    } finally {
+      ${2}
+    }
+    """
+  "try/catch/finally":
+    prefix: "tcf"
+    body: """
+    try {
+      ${1}
+    } catch (${2:err}) {
+      ${3}
+    } finally {
+      ${4}
+    }
+    """

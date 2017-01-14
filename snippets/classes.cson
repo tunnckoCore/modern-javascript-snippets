@@ -1,0 +1,45 @@
+".source.js, .source.jsx, .source.ts":
+  "class":
+    prefix: "cs"
+    body: """
+    class ${1:ClassName} {
+      constructor (${2:args}) {
+        ${3}
+      }
+    }
+    """
+  "class extends":
+    prefix: "csx"
+    body: """
+    class ${1:ClassName} extends ${2:BaseClass} {
+      constructor (${3:args}) {
+        super(${3:args})
+        ${4}
+      }
+    }
+    """
+  "class method":
+    prefix: "csm"
+    body: """
+    ${1:name} (${2:args}) {
+      ${3}
+    }
+    """
+
+  "es5 singleton class":
+    prefix: "csi"
+    body: """
+    function ${1:ClassName} (${2:args}) {
+      if (!(this instanceof ${1:ClassName})) {
+        return new ${1:ClassName}(${2:args})
+      }
+      ${3}
+    }
+    """
+  "es5 function class":
+    prefix: "csf"
+    body: """
+    function ${1:ClassName} (${2:args}) {
+      ${3}
+    }
+    """

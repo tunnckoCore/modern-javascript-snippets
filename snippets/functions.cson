@@ -1,0 +1,46 @@
+".source.js, .source.jsx, .source.ts":
+  "anonymous function":
+    prefix: "f"
+    body: "function (${1:args}) {${0}}"
+  "named function":
+    prefix: "fn"
+    body: "function ${1:name} (${2:args}) {${0}}"
+
+  "async anonymous function":
+    prefix: "asf"
+    body: "async function (${1:args}) {${0}}"
+  "async named function":
+    prefix: "asfn"
+    body: "async function ${1:name} (${2:args}) {${0}}"
+
+  "arrow function":
+    prefix: "af"
+    body: "(${1:args}) => ${2:statement}"
+  "arrow fn with body":
+    prefix: "afn"
+    body: "(${1:args}) => {${0}}"
+
+  "generator":
+    prefix: "gf"
+    body: "function * (${1:args}) {${0}}"
+  "named generator":
+    prefix: "gfn"
+    body: "function * ${1:name}(${2:args}) {${0}}"
+
+  "immediately-invoked function expression":
+    prefix: "iife"
+    body: """
+    ;(function (${1:args}) {
+      ${0}
+    })(${2})
+    """
+
+  "function apply":
+    prefix: "fa"
+    body: "${1:fn}.apply(${2:this}, ${3:args})"
+  "function call":
+    prefix: "fc"
+    body: "${1:fn}.call(${2:this}, ${3:args})"
+  "function bind":
+    prefix: "fb"
+    body: "${1:fn}.bind(${2:this}, ${3:args})"

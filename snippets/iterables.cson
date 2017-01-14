@@ -1,0 +1,57 @@
+".source.js, .source.jsx, .source.ts":
+  "forEach loop":
+    prefix: "fe"
+    body: "${1:iterable}.forEach(${2:iterator})"
+  "chain forEach":
+    prefix: ".fe"
+    body: ".forEach(${1:iterator})"
+
+  "map":
+    prefix: "map"
+    body: "${1:iterable}.map(${2:iterator})"
+  "chain map":
+    prefix: ".map"
+    body: ".map(${1:iterator})"
+
+  "reduce":
+    prefix: "reduce"
+    body: """
+    ${1:iterable}.reduce((${2:previous}, ${3:current}) => {
+      ${0}
+    }${4:, initial})
+    """
+  "chain reduce":
+    prefix: ".reduce"
+    body: """
+    .reduce((${1:previous}, ${2:current}) => {
+      ${0}
+    }${3:, initial})
+    """
+
+  "filter":
+    prefix: "filter"
+    body: "${1:iterable}.filter(${2:iterator})"
+  "chain filter":
+    prefix: ".filter"
+    body: ".filter(${1:iterator})"
+
+  "find":
+    prefix: "find"
+    body: "${1:iterable}.find(${2:iterator})"
+  "chain find":
+    prefix: ".find"
+    body: ".find(${1:iterator})"
+
+  "every":
+    prefix: "every"
+    body: "${1:iterable}.every(${2:iterator})"
+  "chain every":
+    prefix: ".every"
+    body: ".every(${1:iterator})"
+
+  "some":
+    prefix: "some"
+    body: "${1:iterable}.some(${2:iterator})"
+  "chain some":
+    prefix: ".some"
+    body: ".some(${1:iterator})"

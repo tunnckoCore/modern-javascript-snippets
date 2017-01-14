@@ -1,0 +1,63 @@
+{
+  "name": "modern-javascript-snippets",
+  "version": "0.1.0",
+  "description": "Modern javascript snippets for better productivity with support for JavaScript, Babel, TypeScript, JSX and semicolon-less code.",
+  "repository": "https://github.com/tunnckoCore/modern-javascript-snippets",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://i.am.charlike.online)",
+  "precommit.silent": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo 'ok'",
+    "prerelease": "npm test",
+    "release": "standard-version --sign --no-verify",
+    "precommit": "git add --all",
+    "commit": "git-cz"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "commitizen": "^2.9.2",
+    "cz-conventional-changelog": "^1.2.0",
+    "pre-commit": "^1.2.2",
+    "standard-version": "^4.0.0"
+  },
+  "files": [
+    "index.js",
+    "snippets/"
+  ],
+  "keywords": [],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "verb": {
+    "run": true,
+    "toc": {
+      "render": true,
+      "method": "preWrite",
+      "maxdepth": 3,
+      "footer": ""
+    },
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ],
+    "related": {
+      "list": [
+        "always-done",
+        "minibase",
+        "try-catch-core"
+      ],
+      "highlight": "always-done"
+    },
+    "lint": {
+      "reflinks": true
+    }
+  },
+  "engines": {
+    "node": ">=4",
+    "npm": ">=2",
+    "atom": ">=1.0.0"
+  }
+}

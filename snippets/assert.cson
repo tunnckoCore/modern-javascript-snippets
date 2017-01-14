@@ -1,0 +1,19 @@
+".source.js, .source.jsx, .source.ts":
+  "assert.strictEqual":
+    prefix: "ase"
+    body: "${1:assert}.strictEqual(${2:actual}, ${3:expected})${0}"
+  "assert.notStrictEqual":
+    prefix: "asn"
+    body: "${1:assert}.notStrictEqual(${2:actual}, ${3:expected})${0}"
+  "assert.deepStrictEqual":
+    prefix: "asd"
+    body: "${1:assert}.deepStrictEqual(${2:actual}, ${3:expected})${0}"
+  "assert.notDeepStrictEqual":
+    prefix: "asdn"
+    body: "${1:assert}.notDeepStrictEqual(${2:actual}, ${3:expected})${0}"
+  "assert.ifError":
+    prefix: "asi"
+    body: "${1:assert}.ifError(${2:err})${0}"
+  "assert.throws":
+    prefix: "ast"
+    body: "${1:assert}.throws(${2:actual}, ${3:expected})${0}"
