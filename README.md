@@ -1,13 +1,11 @@
-# modern-javascript-snippets [![NPM version](https://img.shields.io/npm/v/modern-javascript-snippets.svg?style=flat)](https://www.npmjs.com/package/modern-javascript-snippets) [![NPM monthly downloads](https://img.shields.io/npm/dm/modern-javascript-snippets.svg?style=flat)](https://npmjs.org/package/modern-javascript-snippets) [![npm total downloads][downloads-img]][downloads-url]
+# modern-javascript-snippets
 
 > Modern javascript snippets for better productivity with support for JavaScript, Babel, TypeScript, JSX and semicolon-less code.
 
-[![code climate][codeclimate-img]][codeclimate-url]
-[![standard code style][standard-img]][standard-url]
-[![linux build status][travis-img]][travis-url]
-[![windows build status][appveyor-img]][appveyor-url]
-[![coverage status][coveralls-img]][coveralls-url]
+[![atom package manager][apm-img]][apm-url]
+[![apm downloads][downloads-img]][downloads-url]
 [![dependency status][david-img]][david-url]
+[![standard code style][standard-img]][standard-url]
 
 You might also be interested in [always-done](https://github.com/hybridables/always-done#readme).
 
@@ -22,24 +20,24 @@ The documentation is built and fully automated using [verb][], including [table 
 - [Install](#install)
 - [Snippets](#snippets)
   * [assert](#assert)
-  * [control-flow](#control-flow)
-  * [classes](#classes)
   * [async](#async)
+  * [classes](#classes)
   * [console](#console)
+  * [control-flow](#control-flow)
   * [declarations](#declarations)
+  * [events](#events)
+  * [functions](#functions)
+  * [iterables](#iterables)
   * [json](#json)
   * [loops](#loops)
   * [misc](#misc)
   * [modules-commonjs](#modules-commonjs)
-  * [functions](#functions)
-  * [events](#events)
-  * [returns](#returns)
-  * [testing](#testing)
-  * [iterables](#iterables)
   * [modules-es2015](#modules-es2015)
   * [objects](#objects)
+  * [testing](#testing)
   * [timers](#timers)
   * [types](#types)
+  * [returns](#returns)
 - [Related](#related)
 - [Contributing](#contributing)
 - [Building docs](#building-docs)
@@ -95,6 +93,131 @@ ${1:assert}.ifError(${2:err})${0}
 
 ```js
 ${1:assert}.throws(${2:actual}, ${3:expected})${0}
+```
+
+**[back to top](#table-of-contents)**
+
+### async
+> All [async](./snippets/async.cson) snippets
+
+#### `cb⇥` Node callback
+
+```js
+(err, ${1:value}) => {${0}}
+```
+
+#### `p⇥` Promise constructor
+
+```js
+new Promise((resolve${1:, reject}) => {
+  ${0}
+})
+```
+
+#### `then⇥` Promise.then
+
+```js
+${1:promise}.then((${2:value}) => {${0}})
+```
+
+#### `.then⇥` chain then
+
+```js
+.then((${1:value}) => {${0}})
+```
+
+#### `catch⇥` Promise.catch
+
+```js
+${1:promise}.catch((${2:err}) => {${0}})
+```
+
+#### `.catch⇥` chain catch
+
+```js
+.catch((${1:err}) => {${0}})
+```
+
+**[back to top](#table-of-contents)**
+
+### classes
+> All [classes](./snippets/classes.cson) snippets
+
+#### `cs⇥` class
+
+```js
+class ${1:ClassName} {
+  constructor (${2:args}) {
+    ${3}
+  }
+}
+```
+
+#### `csx⇥` class extends
+
+```js
+class ${1:ClassName} extends ${2:BaseClass} {
+  constructor (${3:args}) {
+    super(${3:args})
+    ${4}
+  }
+}
+```
+
+#### `csm⇥` class method
+
+```js
+${1:name} (${2:args}) {
+  ${3}
+}
+```
+
+#### `csi⇥` es5 singleton class
+
+```js
+function ${1:ClassName} (${2:args}) {
+  if (!(this instanceof ${1:ClassName})) {
+    return new ${1:ClassName}(${2:args})
+  }
+  ${3}
+}
+```
+
+#### `csf⇥` es5 function class
+
+```js
+function ${1:ClassName} (${2:args}) {
+  ${3}
+}
+```
+
+**[back to top](#table-of-contents)**
+
+### console
+> All [console](./snippets/console.cson) snippets
+
+#### `cl⇥` console.log
+
+```js
+console.log(${0})
+```
+
+#### `ce⇥` console.error
+
+```js
+console.error(${0})
+```
+
+#### `cw⇥` console.warn
+
+```js
+console.warn(${0})
+```
+
+#### `cd⇥` console.dir
+
+```js
+console.dir(${0})
 ```
 
 **[back to top](#table-of-contents)**
@@ -166,131 +289,6 @@ try {
 } finally {
   ${4}
 }
-```
-
-**[back to top](#table-of-contents)**
-
-### classes
-> All [classes](./snippets/classes.cson) snippets
-
-#### `cs⇥` class
-
-```js
-class ${1:ClassName} {
-  constructor (${2:args}) {
-    ${3}
-  }
-}
-```
-
-#### `csx⇥` class extends
-
-```js
-class ${1:ClassName} extends ${2:BaseClass} {
-  constructor (${3:args}) {
-    super(${3:args})
-    ${4}
-  }
-}
-```
-
-#### `csm⇥` class method
-
-```js
-${1:name} (${2:args}) {
-  ${3}
-}
-```
-
-#### `csi⇥` es5 singleton class
-
-```js
-function ${1:ClassName} (${2:args}) {
-  if (!(this instanceof ${1:ClassName})) {
-    return new ${1:ClassName}(${2:args})
-  }
-  ${3}
-}
-```
-
-#### `csf⇥` es5 function class
-
-```js
-function ${1:ClassName} (${2:args}) {
-  ${3}
-}
-```
-
-**[back to top](#table-of-contents)**
-
-### async
-> All [async](./snippets/async.cson) snippets
-
-#### `cb⇥` Node callback
-
-```js
-(err, ${1:value}) => {${0}}
-```
-
-#### `p⇥` Promise constructor
-
-```js
-new Promise((resolve${1:, reject}) => {
-  ${0}
-})
-```
-
-#### `then⇥` Promise.then
-
-```js
-${1:promise}.then((${2:value}) => {${0}})
-```
-
-#### `.then⇥` chain then
-
-```js
-.then((${1:value}) => {${0}})
-```
-
-#### `catch⇥` Promise.catch
-
-```js
-${1:promise}.catch((${2:err}) => {${0}})
-```
-
-#### `.catch⇥` chain catch
-
-```js
-.catch((${1:err}) => {${0}})
-```
-
-**[back to top](#table-of-contents)**
-
-### console
-> All [console](./snippets/console.cson) snippets
-
-#### `cl⇥` console.log
-
-```js
-console.log(${0})
-```
-
-#### `ce⇥` console.error
-
-```js
-console.error(${0})
-```
-
-#### `cw⇥` console.warn
-
-```js
-console.warn(${0})
-```
-
-#### `cd⇥` console.dir
-
-```js
-console.dir(${0})
 ```
 
 **[back to top](#table-of-contents)**
@@ -372,6 +370,219 @@ const ${1:name} = {
 const ${1:name} = [
   ${2}
 ]
+```
+
+**[back to top](#table-of-contents)**
+
+### events
+> All [events](./snippets/events.cson) snippets
+
+#### `on⇥` on event handler
+
+```js
+${1:emitter}.on('${2:event}', ${3:args})
+```
+
+#### `.on⇥` chain .on
+
+```js
+.on('${1:event}', ${2:handler})
+```
+
+#### `once⇥` once event handler
+
+```js
+${1:emitter}.once('${2:event}', ${3:args})
+```
+
+#### `.once⇥` chain .once
+
+```js
+.once('${1:event}', ${2:handler})
+```
+
+#### `emit⇥` emit event
+
+```js
+${1:emitter}.emit('${2:event}', ${3:args})
+```
+
+#### `.emit⇥` chain .emit
+
+```js
+.emit('${1:event}', ${2:args})
+```
+
+**[back to top](#table-of-contents)**
+
+### functions
+> All [functions](./snippets/functions.cson) snippets
+
+#### `f⇥` anonymous function
+
+```js
+function (${1:args}) {${0}}
+```
+
+#### `fn⇥` named function
+
+```js
+function ${1:name} (${2:args}) {${0}}
+```
+
+#### `asf⇥` async anonymous function
+
+```js
+async function (${1:args}) {${0}}
+```
+
+#### `asfn⇥` async named function
+
+```js
+async function ${1:name} (${2:args}) {${0}}
+```
+
+#### `af⇥` arrow function
+
+```js
+(${1:args}) => ${2:statement}
+```
+
+#### `afn⇥` arrow fn with body
+
+```js
+(${1:args}) => {${0}}
+```
+
+#### `gf⇥` generator
+
+```js
+function * (${1:args}) {${0}}
+```
+
+#### `gfn⇥` named generator
+
+```js
+function * ${1:name}(${2:args}) {${0}}
+```
+
+#### `iife⇥` immediately-invoked function expression
+
+```js
+;(function (${1:args}) {
+  ${0}
+})(${2})
+```
+
+#### `fa⇥` function apply
+
+```js
+${1:fn}.apply(${2:this}, ${3:args})
+```
+
+#### `fc⇥` function call
+
+```js
+${1:fn}.call(${2:this}, ${3:args})
+```
+
+#### `fb⇥` function bind
+
+```js
+${1:fn}.bind(${2:this}, ${3:args})
+```
+
+**[back to top](#table-of-contents)**
+
+### iterables
+> All [iterables](./snippets/iterables.cson) snippets
+
+#### `fe⇥` forEach loop
+
+```js
+${1:iterable}.forEach(${2:iterator})
+```
+
+#### `.fe⇥` chain forEach
+
+```js
+.forEach(${1:iterator})
+```
+
+#### `map⇥` map
+
+```js
+${1:iterable}.map(${2:iterator})
+```
+
+#### `.map⇥` chain map
+
+```js
+.map(${1:iterator})
+```
+
+#### `reduce⇥` reduce
+
+```js
+${1:iterable}.reduce((${2:previous}, ${3:current}) => {
+  ${0}
+}${4:, initial})
+```
+
+#### `.reduce⇥` chain reduce
+
+```js
+.reduce((${1:previous}, ${2:current}) => {
+  ${0}
+}${3:, initial})
+```
+
+#### `filter⇥` filter
+
+```js
+${1:iterable}.filter(${2:iterator})
+```
+
+#### `.filter⇥` chain filter
+
+```js
+.filter(${1:iterator})
+```
+
+#### `find⇥` find
+
+```js
+${1:iterable}.find(${2:iterator})
+```
+
+#### `.find⇥` chain find
+
+```js
+.find(${1:iterator})
+```
+
+#### `every⇥` every
+
+```js
+${1:iterable}.every(${2:iterator})
+```
+
+#### `.every⇥` chain every
+
+```js
+.every(${1:iterator})
+```
+
+#### `some⇥` some
+
+```js
+${1:iterable}.some(${2:iterator})
+```
+
+#### `.some⇥` chain some
+
+```js
+.some(${1:iterator})
 ```
 
 **[back to top](#table-of-contents)**
@@ -571,303 +782,6 @@ module.exports = exports['default'] = ${1:value}
 
 **[back to top](#table-of-contents)**
 
-### functions
-> All [functions](./snippets/functions.cson) snippets
-
-#### `f⇥` anonymous function
-
-```js
-function (${1:args}) {${0}}
-```
-
-#### `fn⇥` named function
-
-```js
-function ${1:name} (${2:args}) {${0}}
-```
-
-#### `asf⇥` async anonymous function
-
-```js
-async function (${1:args}) {${0}}
-```
-
-#### `asfn⇥` async named function
-
-```js
-async function ${1:name} (${2:args}) {${0}}
-```
-
-#### `af⇥` arrow function
-
-```js
-(${1:args}) => ${2:statement}
-```
-
-#### `afn⇥` arrow fn with body
-
-```js
-(${1:args}) => {${0}}
-```
-
-#### `gf⇥` generator
-
-```js
-function * (${1:args}) {${0}}
-```
-
-#### `gfn⇥` named generator
-
-```js
-function * ${1:name}(${2:args}) {${0}}
-```
-
-#### `iife⇥` immediately-invoked function expression
-
-```js
-;(function (${1:args}) {
-  ${0}
-})(${2})
-```
-
-#### `fa⇥` function apply
-
-```js
-${1:fn}.apply(${2:this}, ${3:args})
-```
-
-#### `fc⇥` function call
-
-```js
-${1:fn}.call(${2:this}, ${3:args})
-```
-
-#### `fb⇥` function bind
-
-```js
-${1:fn}.bind(${2:this}, ${3:args})
-```
-
-**[back to top](#table-of-contents)**
-
-### events
-> All [events](./snippets/events.cson) snippets
-
-#### `on⇥` on event handler
-
-```js
-${1:emitter}.on('${2:event}', ${3:args})
-```
-
-#### `.on⇥` chain .on
-
-```js
-.on('${1:event}', ${2:handler})
-```
-
-#### `once⇥` once event handler
-
-```js
-${1:emitter}.once('${2:event}', ${3:args})
-```
-
-#### `.once⇥` chain .once
-
-```js
-.once('${1:event}', ${2:handler})
-```
-
-#### `emit⇥` emit event
-
-```js
-${1:emitter}.emit('${2:event}', ${3:args})
-```
-
-#### `.emit⇥` chain .emit
-
-```js
-.emit('${1:event}', ${2:args})
-```
-
-**[back to top](#table-of-contents)**
-
-### returns
-> All [returns](./snippets/returns.cson) snippets
-
-#### `r⇥` return
-
-```js
-return ${0}
-```
-
-#### `rth⇥` return this
-
-```js
-return this
-```
-
-#### `rn⇥` return null
-
-```js
-return null
-```
-
-#### `rt⇥` return true
-
-```js
-return true
-```
-
-#### `rf⇥` return false
-
-```js
-return false
-```
-
-#### `r0⇥` return 0
-
-```js
-return 0
-```
-
-#### `r-1⇥` return -1
-
-```js
-return -1
-```
-
-#### `rp⇥` return promise
-
-```js
-return new Promise((resolve${1:, reject}) => {
-  ${0}
-})
-```
-
-**[back to top](#table-of-contents)**
-
-### testing
-> All [testing](./snippets/testing.cson) snippets
-
-#### `ita⇥` async test (mocha/mukla)
-
-```js
-${1:it}('${2:description}', (${3:done}) => {
-  ${0}
-})
-```
-
-#### `its⇥` synchronous test (mocha/mukla)
-
-```js
-${1:it}('${2:description}', () => {
-  ${0}
-})
-```
-
-#### `te⇥` tape-style test
-
-```js
-${1:test}('${2:description}', (${3:t}) => {
-  ${0}
-})
-```
-
-**[back to top](#table-of-contents)**
-
-### iterables
-> All [iterables](./snippets/iterables.cson) snippets
-
-#### `fe⇥` forEach loop
-
-```js
-${1:iterable}.forEach(${2:iterator})
-```
-
-#### `.fe⇥` chain forEach
-
-```js
-.forEach(${1:iterator})
-```
-
-#### `map⇥` map
-
-```js
-${1:iterable}.map(${2:iterator})
-```
-
-#### `.map⇥` chain map
-
-```js
-.map(${1:iterator})
-```
-
-#### `reduce⇥` reduce
-
-```js
-${1:iterable}.reduce((${2:previous}, ${3:current}) => {
-  ${0}
-}${4:, initial})
-```
-
-#### `.reduce⇥` chain reduce
-
-```js
-.reduce((${1:previous}, ${2:current}) => {
-  ${0}
-}${3:, initial})
-```
-
-#### `filter⇥` filter
-
-```js
-${1:iterable}.filter(${2:iterator})
-```
-
-#### `.filter⇥` chain filter
-
-```js
-.filter(${1:iterator})
-```
-
-#### `find⇥` find
-
-```js
-${1:iterable}.find(${2:iterator})
-```
-
-#### `.find⇥` chain find
-
-```js
-.find(${1:iterator})
-```
-
-#### `every⇥` every
-
-```js
-${1:iterable}.every(${2:iterator})
-```
-
-#### `.every⇥` chain every
-
-```js
-.every(${1:iterator})
-```
-
-#### `some⇥` some
-
-```js
-${1:iterable}.some(${2:iterator})
-```
-
-#### `.some⇥` chain some
-
-```js
-.some(${1:iterator})
-```
-
-**[back to top](#table-of-contents)**
-
 ### modules-es2015
 > All [modules-es2015](./snippets/modules-es2015.cson) snippets
 
@@ -942,6 +856,35 @@ Object.assign(${1:dest}, ${2:source})${0}
 
 ```js
 Object.keys(${1:obj})${0}
+```
+
+**[back to top](#table-of-contents)**
+
+### testing
+> All [testing](./snippets/testing.cson) snippets
+
+#### `ita⇥` async test (mocha/mukla)
+
+```js
+${1:it}('${2:description}', (${3:done}) => {
+  ${0}
+})
+```
+
+#### `its⇥` synchronous test (mocha/mukla)
+
+```js
+${1:it}('${2:description}', () => {
+  ${0}
+})
+```
+
+#### `te⇥` tape-style test
+
+```js
+${1:test}('${2:description}', (${3:t}) => {
+  ${0}
+})
 ```
 
 **[back to top](#table-of-contents)**
@@ -1066,6 +1009,61 @@ Array.isArray(${1:source})
 
 **[back to top](#table-of-contents)**
 
+### returns
+> All [returns](./snippets/returns.cson) snippets
+
+#### `r⇥` return
+
+```js
+return ${0}
+```
+
+#### `rth⇥` return this
+
+```js
+return this
+```
+
+#### `rn⇥` return null
+
+```js
+return null
+```
+
+#### `rt⇥` return true
+
+```js
+return true
+```
+
+#### `rf⇥` return false
+
+```js
+return false
+```
+
+#### `r0⇥` return 0
+
+```js
+return 0
+```
+
+#### `r-1⇥` return -1
+
+```js
+return -1
+```
+
+#### `rp⇥` return promise
+
+```js
+return new Promise((resolve${1:, reject}) => {
+  ${0}
+})
+```
+
+**[back to top](#table-of-contents)**
+
 ## Related
 - [always-done](https://www.npmjs.com/package/always-done): Handle completion and errors with elegance! Support for streams, callbacks, promises, child processes, async/await and sync functions. A drop-in replacement… [more](https://github.com/hybridables/always-done#readme) | [homepage](https://github.com/hybridables/always-done#readme "Handle completion and errors with elegance! Support for streams, callbacks, promises, child processes, async/await and sync functions. A drop-in replacement for [async-done][] - pass 100% of its tests plus more")
 - [minibase](https://www.npmjs.com/package/minibase): Minimalist alternative for Base. Build complex APIs with small units called plugins. Works well with most of the already existing… [more](https://github.com/node-minibase/minibase#readme) | [homepage](https://github.com/node-minibase/minibase#readme "Minimalist alternative for Base. Build complex APIs with small units called plugins. Works well with most of the already existing [base][] plugins.")
@@ -1122,25 +1120,15 @@ _Project scaffolded using [charlike][] cli._
 [charlike]: https://github.com/tunnckocore/charlike
 [commitizen]: https://github.com/commitizen/cz-cli
 [dezalgo]: https://github.com/npm/dezalgo
+[extend-shallow]: https://github.com/jonschlinkert/extend-shallow
 [once]: https://github.com/isaacs/once
 [standard-version]: https://github.com/conventional-changelog/standard-version
+[standard]: http://standardjs.com
 [verb-generate-readme]: https://github.com/verbose/verb-generate-readme
 [verb]: https://github.com/verbose/verb
 
-[downloads-url]: https://www.npmjs.com/package/modern-javascript-snippets
-[downloads-img]: https://img.shields.io/npm/dt/modern-javascript-snippets.svg
-
-[codeclimate-url]: https://codeclimate.com/github/tunnckoCore/modern-javascript-snippets
-[codeclimate-img]: https://img.shields.io/codeclimate/github/tunnckoCore/modern-javascript-snippets.svg
-
-[travis-url]: https://travis-ci.org/tunnckoCore/modern-javascript-snippets
-[travis-img]: https://img.shields.io/travis/tunnckoCore/modern-javascript-snippets/master.svg?label=linux
-
-[appveyor-url]: https://ci.appveyor.com/project/tunnckoCore/modern-javascript-snippets
-[appveyor-img]: https://img.shields.io/appveyor/ci/tunnckoCore/modern-javascript-snippets/master.svg?label=windows
-
-[coveralls-url]: https://coveralls.io/r/tunnckoCore/modern-javascript-snippets
-[coveralls-img]: https://img.shields.io/coveralls/tunnckoCore/modern-javascript-snippets.svg
+[downloads-url]: https://atom.io/packages/modern-javascript-snippets
+[downloads-img]: https://img.shields.io/apm/dm/modern-javascript-snippets.svg
 
 [david-url]: https://david-dm.org/tunnckoCore/modern-javascript-snippets
 [david-img]: https://img.shields.io/david/tunnckoCore/modern-javascript-snippets.svg
@@ -1148,5 +1136,6 @@ _Project scaffolded using [charlike][] cli._
 [standard-url]: https://github.com/feross/standard
 [standard-img]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 
-[extend-shallow]: https://github.com/jonschlinkert/extend-shallow
-[standard]: http://standardjs.com
+[apm-url]: https://atom.io/packages/modern-javascript-snippets
+[apm-img]: https://img.shields.io/apm/v/modern-javascript-snippets.svg
+
