@@ -20,8 +20,8 @@ You might also be interested in [always-done](https://github.com/hybridables/alw
   * [console](#console)
   * [control-flow](#control-flow)
   * [declarations](#declarations)
-  * [events](#events)
   * [functions](#functions)
+  * [events](#events)
   * [iterables](#iterables)
   * [json](#json)
   * [loops](#loops)
@@ -90,7 +90,7 @@ ${1:assert}.ifError(${2:err})${0}
 ${1:assert}.throws(${2:actual}, ${3:expected})${0}
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### async
 > All [async](./snippets/async.cson) snippets
@@ -133,7 +133,7 @@ ${1:promise}.catch((${2:err}) => {${0}})
 .catch((${1:err}) => {${0}})
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### classes
 > All [classes](./snippets/classes.cson) snippets
@@ -186,7 +186,7 @@ function ${1:ClassName} (${2:args}) {
 }
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### console
 > All [console](./snippets/console.cson) snippets
@@ -215,7 +215,7 @@ console.warn(${0})
 console.dir(${0})
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### control-flow
 > All [control-flow](./snippets/control-flow.cson) snippets
@@ -286,7 +286,7 @@ try {
 }
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### declarations
 > All [declarations](./snippets/declarations.cson) snippets
@@ -367,48 +367,7 @@ const ${1:name} = [
 ]
 ```
 
-[back to ToC](#table-of-contents)
-
-### events
-> All [events](./snippets/events.cson) snippets
-
-#### `on⇥` on event handler
-
-```js
-${1:emitter}.on('${2:event}', ${3:args})
-```
-
-#### `.on⇥` chain .on
-
-```js
-.on('${1:event}', ${2:handler})
-```
-
-#### `once⇥` once event handler
-
-```js
-${1:emitter}.once('${2:event}', ${3:args})
-```
-
-#### `.once⇥` chain .once
-
-```js
-.once('${1:event}', ${2:handler})
-```
-
-#### `emit⇥` emit event
-
-```js
-${1:emitter}.emit('${2:event}', ${3:args})
-```
-
-#### `.emit⇥` chain .emit
-
-```js
-.emit('${1:event}', ${2:args})
-```
-
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### functions
 > All [functions](./snippets/functions.cson) snippets
@@ -487,7 +446,48 @@ ${1:fn}.call(${2:this}, ${3:args})
 ${1:fn}.bind(${2:this}, ${3:args})
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
+
+### events
+> All [events](./snippets/events.cson) snippets
+
+#### `on⇥` on event handler
+
+```js
+${1:emitter}.on('${2:event}', ${3:args})
+```
+
+#### `.on⇥` chain .on
+
+```js
+.on('${1:event}', ${2:handler})
+```
+
+#### `once⇥` once event handler
+
+```js
+${1:emitter}.once('${2:event}', ${3:args})
+```
+
+#### `.once⇥` chain .once
+
+```js
+.once('${1:event}', ${2:handler})
+```
+
+#### `emit⇥` emit event
+
+```js
+${1:emitter}.emit('${2:event}', ${3:args})
+```
+
+#### `.emit⇥` chain .emit
+
+```js
+.emit('${1:event}', ${2:args})
+```
+
+**[back to top](#table-of-contents)**
 
 ### iterables
 > All [iterables](./snippets/iterables.cson) snippets
@@ -580,7 +580,7 @@ ${1:iterable}.some(${2:iterator})
 .some(${1:iterator})
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### json
 > All [json](./snippets/json.cson) snippets
@@ -603,7 +603,7 @@ ${1:iterable}.some(${2:iterator})
 "${1:key}": true
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### loops
 > All [loops](./snippets/loops.cson) snippets
@@ -654,7 +654,7 @@ while (i < len) {
 }
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### misc
 > All [misc](./snippets/misc.cson) snippets
@@ -734,7 +734,7 @@ function fixture () {
 }${0}
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### modules-commonjs
 > All [modules-commonjs](./snippets/modules-commonjs.cson) snippets
@@ -775,7 +775,7 @@ module.exports = ${1:value}
 module.exports = exports['default'] = ${1:value}
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### modules-es2015
 > All [modules-es2015](./snippets/modules-es2015.cson) snippets
@@ -810,7 +810,7 @@ import ${2:*} as ${3:name} from '${1:pkg}'${4}
 import { $2 } from '${1:pkg}'${3}
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### objects
 > All [objects](./snippets/objects.cson) snippets
@@ -853,7 +853,7 @@ Object.assign(${1:dest}, ${2:source})${0}
 Object.keys(${1:obj})${0}
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### returns
 > All [returns](./snippets/returns.cson) snippets
@@ -908,7 +908,7 @@ return new Promise((resolve${1:, reject}) => {
 })
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### testing
 > All [testing](./snippets/testing.cson) snippets
@@ -937,7 +937,7 @@ ${1:test}('${2:description}', (${3:t}) => {
 })
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### timers
 > All [timers](./snippets/timers.cson) snippets
@@ -974,7 +974,7 @@ setImmediate(() => {
 })
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ### types
 > All [types](./snippets/types.cson) snippets
@@ -1057,7 +1057,7 @@ ${1:source} instanceof ${2:Object}
 Array.isArray(${1:source})
 ```
 
-[back to ToC](#table-of-contents)
+**[back to top](#table-of-contents)**
 
 ## Related
 - [always-done](https://www.npmjs.com/package/always-done): Handle completion and errors with elegance! Support for streams, callbacks, promises, child processes, async/await and sync functions. A drop-in replacement… [more](https://github.com/hybridables/always-done#readme) | [homepage](https://github.com/hybridables/always-done#readme "Handle completion and errors with elegance! Support for streams, callbacks, promises, child processes, async/await and sync functions. A drop-in replacement for [async-done][] - pass 100% of its tests plus more")

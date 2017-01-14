@@ -40,7 +40,7 @@ const generateSnippetDocs = (cb) => {
         buf = buf + fence + '\n\n'
       }
 
-      buf = `${buf}[back to ToC](#table-of-contents)\n\n`
+      buf = `${buf}**[back to top](#table-of-contents)**\n\n`
     })
 
     cb(null, buf)
