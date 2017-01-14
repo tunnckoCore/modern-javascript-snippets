@@ -1,0 +1,7 @@
+{
+  "extends": "standard",
+  "rules": {
+    "semi": [2, "never"],
+    "no-extra-semi": 2
+  }
+}
