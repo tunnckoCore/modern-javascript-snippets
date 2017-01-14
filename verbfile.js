@@ -40,7 +40,7 @@ const generateSnippetDocs = (cb) => {
         buf = buf + fence + '\n\n'
       }
 
-      buf = `${buf}**[back to top](#table-of-contents)**\n\n`
+      buf = `${buf}**[back to top](#readme)**\n\n`
     })
 
     cb(null, buf)
@@ -64,7 +64,7 @@ const parseFiles = (dir) => {
 const readFiles = (dir) => readdir(dir).then((fps) => {
   if (!fps.length) return fps
 
-  return each.parallel(fps.map((filepath) => () => {
+  return each.serial(fps.map((filepath) => () => {
     return fs.readFile(filepath, 'utf8').then((contents) => ({
       path: filepath,
       contents: contents

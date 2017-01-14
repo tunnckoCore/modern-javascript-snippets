@@ -34,10 +34,10 @@ The documentation is built and fully automated using [verb][], including [table 
   * [modules-commonjs](#modules-commonjs)
   * [modules-es2015](#modules-es2015)
   * [objects](#objects)
+  * [returns](#returns)
   * [testing](#testing)
   * [timers](#timers)
   * [types](#types)
-  * [returns](#returns)
 - [Related](#related)
 - [Contributing](#contributing)
 - [Building docs](#building-docs)
@@ -95,7 +95,7 @@ ${1:assert}.ifError(${2:err})${0}
 ${1:assert}.throws(${2:actual}, ${3:expected})${0}
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### async
 > All [async](./snippets/async.cson) snippets
@@ -138,7 +138,7 @@ ${1:promise}.catch((${2:err}) => {${0}})
 .catch((${1:err}) => {${0}})
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### classes
 > All [classes](./snippets/classes.cson) snippets
@@ -191,7 +191,7 @@ function ${1:ClassName} (${2:args}) {
 }
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### console
 > All [console](./snippets/console.cson) snippets
@@ -220,7 +220,7 @@ console.warn(${0})
 console.dir(${0})
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### control-flow
 > All [control-flow](./snippets/control-flow.cson) snippets
@@ -291,7 +291,7 @@ try {
 }
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### declarations
 > All [declarations](./snippets/declarations.cson) snippets
@@ -372,7 +372,7 @@ const ${1:name} = [
 ]
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### events
 > All [events](./snippets/events.cson) snippets
@@ -413,7 +413,7 @@ ${1:emitter}.emit('${2:event}', ${3:args})
 .emit('${1:event}', ${2:args})
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### functions
 > All [functions](./snippets/functions.cson) snippets
@@ -492,7 +492,7 @@ ${1:fn}.call(${2:this}, ${3:args})
 ${1:fn}.bind(${2:this}, ${3:args})
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### iterables
 > All [iterables](./snippets/iterables.cson) snippets
@@ -585,7 +585,7 @@ ${1:iterable}.some(${2:iterator})
 .some(${1:iterator})
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### json
 > All [json](./snippets/json.cson) snippets
@@ -608,7 +608,7 @@ ${1:iterable}.some(${2:iterator})
 "${1:key}": true
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### loops
 > All [loops](./snippets/loops.cson) snippets
@@ -659,7 +659,7 @@ while (i < len) {
 }
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### misc
 > All [misc](./snippets/misc.cson) snippets
@@ -739,7 +739,7 @@ function fixture () {
 }${0}
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### modules-commonjs
 > All [modules-commonjs](./snippets/modules-commonjs.cson) snippets
@@ -780,7 +780,7 @@ module.exports = ${1:value}
 module.exports = exports['default'] = ${1:value}
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### modules-es2015
 > All [modules-es2015](./snippets/modules-es2015.cson) snippets
@@ -815,7 +815,7 @@ import ${2:*} as ${3:name} from '${1:pkg}'${4}
 import { $2 } from '${1:pkg}'${3}
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### objects
 > All [objects](./snippets/objects.cson) snippets
@@ -858,7 +858,62 @@ Object.assign(${1:dest}, ${2:source})${0}
 Object.keys(${1:obj})${0}
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
+
+### returns
+> All [returns](./snippets/returns.cson) snippets
+
+#### `r⇥` return
+
+```js
+return ${0}
+```
+
+#### `rth⇥` return this
+
+```js
+return this
+```
+
+#### `rn⇥` return null
+
+```js
+return null
+```
+
+#### `rt⇥` return true
+
+```js
+return true
+```
+
+#### `rf⇥` return false
+
+```js
+return false
+```
+
+#### `r0⇥` return 0
+
+```js
+return 0
+```
+
+#### `r-1⇥` return -1
+
+```js
+return -1
+```
+
+#### `rp⇥` return promise
+
+```js
+return new Promise((resolve${1:, reject}) => {
+  ${0}
+})
+```
+
+**[back to top](#readme)**
 
 ### testing
 > All [testing](./snippets/testing.cson) snippets
@@ -887,7 +942,7 @@ ${1:test}('${2:description}', (${3:t}) => {
 })
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### timers
 > All [timers](./snippets/timers.cson) snippets
@@ -924,7 +979,7 @@ setImmediate(() => {
 })
 ```
 
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ### types
 > All [types](./snippets/types.cson) snippets
@@ -1007,62 +1062,7 @@ ${1:source} instanceof ${2:Object}
 Array.isArray(${1:source})
 ```
 
-**[back to top](#table-of-contents)**
-
-### returns
-> All [returns](./snippets/returns.cson) snippets
-
-#### `r⇥` return
-
-```js
-return ${0}
-```
-
-#### `rth⇥` return this
-
-```js
-return this
-```
-
-#### `rn⇥` return null
-
-```js
-return null
-```
-
-#### `rt⇥` return true
-
-```js
-return true
-```
-
-#### `rf⇥` return false
-
-```js
-return false
-```
-
-#### `r0⇥` return 0
-
-```js
-return 0
-```
-
-#### `r-1⇥` return -1
-
-```js
-return -1
-```
-
-#### `rp⇥` return promise
-
-```js
-return new Promise((resolve${1:, reject}) => {
-  ${0}
-})
-```
-
-**[back to top](#table-of-contents)**
+**[back to top](#readme)**
 
 ## Related
 - [always-done](https://www.npmjs.com/package/always-done): Handle completion and errors with elegance! Support for streams, callbacks, promises, child processes, async/await and sync functions. A drop-in replacement… [more](https://github.com/hybridables/always-done#readme) | [homepage](https://github.com/hybridables/always-done#readme "Handle completion and errors with elegance! Support for streams, callbacks, promises, child processes, async/await and sync functions. A drop-in replacement for [async-done][] - pass 100% of its tests plus more")
@@ -1103,7 +1103,7 @@ $ npm install && npm test
 **Charlike Mike Reagent**
 
 + [github/tunnckoCore](https://github.com/tunnckoCore)
-+ [twitter/tunnckoCore](http://twitter.com/tunnckoCore)
++ [twitter/tunnckoCore](https://twitter.com/tunnckoCore)
 + [codementor/tunnckoCore](https://codementor.io/tunnckoCore)
 
 ## License
@@ -1111,7 +1111,7 @@ Copyright © 2016-2017, [Charlike Mike Reagent](http://i.am.charlike.online). Re
 
 ***
 
-_This file was generated by [verb-generate-readme](https://github.com/verbose/verb-generate-readme), v0.3.0, on January 14, 2017._  
+_This file was generated by [verb-generate-readme](https://github.com/verbose/verb-generate-readme), v0.4.1, on January 15, 2017._  
 _Project scaffolded using [charlike][] cli._
 
 [always-done]: https://github.com/hybridables/always-done
