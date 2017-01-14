@@ -11,26 +11,33 @@
 
 You might also be interested in [always-done](https://github.com/hybridables/always-done#readme).
 
+Highly opinionated to my needs - don't includes snippets that I don't use. But also is mixed between my previous Sublime [javascript-charlike-snippets](https://github.com/tunnckoCore/javascript-charlike-snippets), [standardjs-snippets](https://atom.io/packages/standardjs-snippets) and [es6-javascript](https://atom.io/packages/es6-javascript).
+
+It uses [standard][] style as base. But easily can be changed with a bit automation, so
+please open an issue if you want such thing.
+
+The documentation is built and fully automated using [verb][], including [table of contents](#table-of-contents) and even the [snippets docs](#snippets).
+
 ## Table of Contents
 - [Install](#install)
 - [Snippets](#snippets)
   * [assert](#assert)
-  * [async](#async)
-  * [classes](#classes)
-  * [console](#console)
   * [control-flow](#control-flow)
+  * [classes](#classes)
+  * [async](#async)
+  * [console](#console)
   * [declarations](#declarations)
-  * [functions](#functions)
-  * [events](#events)
-  * [iterables](#iterables)
   * [json](#json)
   * [loops](#loops)
   * [misc](#misc)
   * [modules-commonjs](#modules-commonjs)
-  * [modules-es2015](#modules-es2015)
-  * [objects](#objects)
+  * [functions](#functions)
+  * [events](#events)
   * [returns](#returns)
   * [testing](#testing)
+  * [iterables](#iterables)
+  * [modules-es2015](#modules-es2015)
+  * [objects](#objects)
   * [timers](#timers)
   * [types](#types)
 - [Related](#related)
@@ -88,131 +95,6 @@ ${1:assert}.ifError(${2:err})${0}
 
 ```js
 ${1:assert}.throws(${2:actual}, ${3:expected})${0}
-```
-
-**[back to top](#table-of-contents)**
-
-### async
-> All [async](./snippets/async.cson) snippets
-
-#### `cb⇥` Node callback
-
-```js
-(err, ${1:value}) => {${0}}
-```
-
-#### `p⇥` Promise constructor
-
-```js
-new Promise((resolve${1:, reject}) => {
-  ${0}
-})
-```
-
-#### `then⇥` Promise.then
-
-```js
-${1:promise}.then((${2:value}) => {${0}})
-```
-
-#### `.then⇥` chain then
-
-```js
-.then((${1:value}) => {${0}})
-```
-
-#### `catch⇥` Promise.catch
-
-```js
-${1:promise}.catch((${2:err}) => {${0}})
-```
-
-#### `.catch⇥` chain catch
-
-```js
-.catch((${1:err}) => {${0}})
-```
-
-**[back to top](#table-of-contents)**
-
-### classes
-> All [classes](./snippets/classes.cson) snippets
-
-#### `cs⇥` class
-
-```js
-class ${1:ClassName} {
-  constructor (${2:args}) {
-    ${3}
-  }
-}
-```
-
-#### `csx⇥` class extends
-
-```js
-class ${1:ClassName} extends ${2:BaseClass} {
-  constructor (${3:args}) {
-    super(${3:args})
-    ${4}
-  }
-}
-```
-
-#### `csm⇥` class method
-
-```js
-${1:name} (${2:args}) {
-  ${3}
-}
-```
-
-#### `csi⇥` es5 singleton class
-
-```js
-function ${1:ClassName} (${2:args}) {
-  if (!(this instanceof ${1:ClassName})) {
-    return new ${1:ClassName}(${2:args})
-  }
-  ${3}
-}
-```
-
-#### `csf⇥` es5 function class
-
-```js
-function ${1:ClassName} (${2:args}) {
-  ${3}
-}
-```
-
-**[back to top](#table-of-contents)**
-
-### console
-> All [console](./snippets/console.cson) snippets
-
-#### `cl⇥` console.log
-
-```js
-console.log(${0})
-```
-
-#### `ce⇥` console.error
-
-```js
-console.error(${0})
-```
-
-#### `cw⇥` console.warn
-
-```js
-console.warn(${0})
-```
-
-#### `cd⇥` console.dir
-
-```js
-console.dir(${0})
 ```
 
 **[back to top](#table-of-contents)**
@@ -284,6 +166,131 @@ try {
 } finally {
   ${4}
 }
+```
+
+**[back to top](#table-of-contents)**
+
+### classes
+> All [classes](./snippets/classes.cson) snippets
+
+#### `cs⇥` class
+
+```js
+class ${1:ClassName} {
+  constructor (${2:args}) {
+    ${3}
+  }
+}
+```
+
+#### `csx⇥` class extends
+
+```js
+class ${1:ClassName} extends ${2:BaseClass} {
+  constructor (${3:args}) {
+    super(${3:args})
+    ${4}
+  }
+}
+```
+
+#### `csm⇥` class method
+
+```js
+${1:name} (${2:args}) {
+  ${3}
+}
+```
+
+#### `csi⇥` es5 singleton class
+
+```js
+function ${1:ClassName} (${2:args}) {
+  if (!(this instanceof ${1:ClassName})) {
+    return new ${1:ClassName}(${2:args})
+  }
+  ${3}
+}
+```
+
+#### `csf⇥` es5 function class
+
+```js
+function ${1:ClassName} (${2:args}) {
+  ${3}
+}
+```
+
+**[back to top](#table-of-contents)**
+
+### async
+> All [async](./snippets/async.cson) snippets
+
+#### `cb⇥` Node callback
+
+```js
+(err, ${1:value}) => {${0}}
+```
+
+#### `p⇥` Promise constructor
+
+```js
+new Promise((resolve${1:, reject}) => {
+  ${0}
+})
+```
+
+#### `then⇥` Promise.then
+
+```js
+${1:promise}.then((${2:value}) => {${0}})
+```
+
+#### `.then⇥` chain then
+
+```js
+.then((${1:value}) => {${0}})
+```
+
+#### `catch⇥` Promise.catch
+
+```js
+${1:promise}.catch((${2:err}) => {${0}})
+```
+
+#### `.catch⇥` chain catch
+
+```js
+.catch((${1:err}) => {${0}})
+```
+
+**[back to top](#table-of-contents)**
+
+### console
+> All [console](./snippets/console.cson) snippets
+
+#### `cl⇥` console.log
+
+```js
+console.log(${0})
+```
+
+#### `ce⇥` console.error
+
+```js
+console.error(${0})
+```
+
+#### `cw⇥` console.warn
+
+```js
+console.warn(${0})
+```
+
+#### `cd⇥` console.dir
+
+```js
+console.dir(${0})
 ```
 
 **[back to top](#table-of-contents)**
@@ -365,219 +372,6 @@ const ${1:name} = {
 const ${1:name} = [
   ${2}
 ]
-```
-
-**[back to top](#table-of-contents)**
-
-### functions
-> All [functions](./snippets/functions.cson) snippets
-
-#### `f⇥` anonymous function
-
-```js
-function (${1:args}) {${0}}
-```
-
-#### `fn⇥` named function
-
-```js
-function ${1:name} (${2:args}) {${0}}
-```
-
-#### `asf⇥` async anonymous function
-
-```js
-async function (${1:args}) {${0}}
-```
-
-#### `asfn⇥` async named function
-
-```js
-async function ${1:name} (${2:args}) {${0}}
-```
-
-#### `af⇥` arrow function
-
-```js
-(${1:args}) => ${2:statement}
-```
-
-#### `afn⇥` arrow fn with body
-
-```js
-(${1:args}) => {${0}}
-```
-
-#### `gf⇥` generator
-
-```js
-function * (${1:args}) {${0}}
-```
-
-#### `gfn⇥` named generator
-
-```js
-function * ${1:name}(${2:args}) {${0}}
-```
-
-#### `iife⇥` immediately-invoked function expression
-
-```js
-;(function (${1:args}) {
-  ${0}
-})(${2})
-```
-
-#### `fa⇥` function apply
-
-```js
-${1:fn}.apply(${2:this}, ${3:args})
-```
-
-#### `fc⇥` function call
-
-```js
-${1:fn}.call(${2:this}, ${3:args})
-```
-
-#### `fb⇥` function bind
-
-```js
-${1:fn}.bind(${2:this}, ${3:args})
-```
-
-**[back to top](#table-of-contents)**
-
-### events
-> All [events](./snippets/events.cson) snippets
-
-#### `on⇥` on event handler
-
-```js
-${1:emitter}.on('${2:event}', ${3:args})
-```
-
-#### `.on⇥` chain .on
-
-```js
-.on('${1:event}', ${2:handler})
-```
-
-#### `once⇥` once event handler
-
-```js
-${1:emitter}.once('${2:event}', ${3:args})
-```
-
-#### `.once⇥` chain .once
-
-```js
-.once('${1:event}', ${2:handler})
-```
-
-#### `emit⇥` emit event
-
-```js
-${1:emitter}.emit('${2:event}', ${3:args})
-```
-
-#### `.emit⇥` chain .emit
-
-```js
-.emit('${1:event}', ${2:args})
-```
-
-**[back to top](#table-of-contents)**
-
-### iterables
-> All [iterables](./snippets/iterables.cson) snippets
-
-#### `fe⇥` forEach loop
-
-```js
-${1:iterable}.forEach(${2:iterator})
-```
-
-#### `.fe⇥` chain forEach
-
-```js
-.forEach(${1:iterator})
-```
-
-#### `map⇥` map
-
-```js
-${1:iterable}.map(${2:iterator})
-```
-
-#### `.map⇥` chain map
-
-```js
-.map(${1:iterator})
-```
-
-#### `reduce⇥` reduce
-
-```js
-${1:iterable}.reduce((${2:previous}, ${3:current}) => {
-  ${0}
-}${4:, initial})
-```
-
-#### `.reduce⇥` chain reduce
-
-```js
-.reduce((${1:previous}, ${2:current}) => {
-  ${0}
-}${3:, initial})
-```
-
-#### `filter⇥` filter
-
-```js
-${1:iterable}.filter(${2:iterator})
-```
-
-#### `.filter⇥` chain filter
-
-```js
-.filter(${1:iterator})
-```
-
-#### `find⇥` find
-
-```js
-${1:iterable}.find(${2:iterator})
-```
-
-#### `.find⇥` chain find
-
-```js
-.find(${1:iterator})
-```
-
-#### `every⇥` every
-
-```js
-${1:iterable}.every(${2:iterator})
-```
-
-#### `.every⇥` chain every
-
-```js
-.every(${1:iterator})
-```
-
-#### `some⇥` some
-
-```js
-${1:iterable}.some(${2:iterator})
-```
-
-#### `.some⇥` chain some
-
-```js
-.some(${1:iterator})
 ```
 
 **[back to top](#table-of-contents)**
@@ -777,80 +571,122 @@ module.exports = exports['default'] = ${1:value}
 
 **[back to top](#table-of-contents)**
 
-### modules-es2015
-> All [modules-es2015](./snippets/modules-es2015.cson) snippets
+### functions
+> All [functions](./snippets/functions.cson) snippets
 
-#### `ex⇥` module export
+#### `f⇥` anonymous function
 
 ```js
-export ${1:member}
+function (${1:args}) {${0}}
 ```
 
-#### `exd⇥` module default export
+#### `fn⇥` named function
 
 ```js
-export default ${1:member}
+function ${1:name} (${2:args}) {${0}}
 ```
 
-#### `im⇥` import module
+#### `asf⇥` async anonymous function
 
 ```js
-import ${2:name} from '${1:pkg}'${3}
+async function (${1:args}) {${0}}
 ```
 
-#### `ima⇥` import module as
+#### `asfn⇥` async named function
 
 ```js
-import ${2:*} as ${3:name} from '${1:pkg}'${4}
+async function ${1:name} (${2:args}) {${0}}
 ```
 
-#### `imd⇥` import module destructured
+#### `af⇥` arrow function
 
 ```js
-import { $2 } from '${1:pkg}'${3}
+(${1:args}) => ${2:statement}
+```
+
+#### `afn⇥` arrow fn with body
+
+```js
+(${1:args}) => {${0}}
+```
+
+#### `gf⇥` generator
+
+```js
+function * (${1:args}) {${0}}
+```
+
+#### `gfn⇥` named generator
+
+```js
+function * ${1:name}(${2:args}) {${0}}
+```
+
+#### `iife⇥` immediately-invoked function expression
+
+```js
+;(function (${1:args}) {
+  ${0}
+})(${2})
+```
+
+#### `fa⇥` function apply
+
+```js
+${1:fn}.apply(${2:this}, ${3:args})
+```
+
+#### `fc⇥` function call
+
+```js
+${1:fn}.call(${2:this}, ${3:args})
+```
+
+#### `fb⇥` function bind
+
+```js
+${1:fn}.bind(${2:this}, ${3:args})
 ```
 
 **[back to top](#table-of-contents)**
 
-### objects
-> All [objects](./snippets/objects.cson) snippets
+### events
+> All [events](./snippets/events.cson) snippets
 
-#### `kv⇥` key/value pair
+#### `on⇥` on event handler
 
 ```js
-${1:key}: ${2:'value'}
+${1:emitter}.on('${2:event}', ${3:args})
 ```
 
-#### `proto⇥` prototype method
+#### `.on⇥` chain .on
 
 ```js
-${1:ClassName}.prototype.${2:key} = ${3:value}
+.on('${1:event}', ${2:handler})
 ```
 
-#### `.proto⇥` chain prototype method
+#### `once⇥` once event handler
 
 ```js
-.prototype.${2:key} = ${3:value}
+${1:emitter}.once('${2:event}', ${3:args})
 ```
 
-#### `xa⇥` extend-shallow
-
-> See [extend-shallow][] lib
+#### `.once⇥` chain .once
 
 ```js
-extend(${1:defaults}, ${2:sources})${0}
+.once('${1:event}', ${2:handler})
 ```
 
-#### `oa⇥` Object.assign
+#### `emit⇥` emit event
 
 ```js
-Object.assign(${1:dest}, ${2:source})${0}
+${1:emitter}.emit('${2:event}', ${3:args})
 ```
 
-#### `ok⇥` Object.keys
+#### `.emit⇥` chain .emit
 
 ```js
-Object.keys(${1:obj})${0}
+.emit('${1:event}', ${2:args})
 ```
 
 **[back to top](#table-of-contents)**
@@ -935,6 +771,177 @@ ${1:it}('${2:description}', () => {
 ${1:test}('${2:description}', (${3:t}) => {
   ${0}
 })
+```
+
+**[back to top](#table-of-contents)**
+
+### iterables
+> All [iterables](./snippets/iterables.cson) snippets
+
+#### `fe⇥` forEach loop
+
+```js
+${1:iterable}.forEach(${2:iterator})
+```
+
+#### `.fe⇥` chain forEach
+
+```js
+.forEach(${1:iterator})
+```
+
+#### `map⇥` map
+
+```js
+${1:iterable}.map(${2:iterator})
+```
+
+#### `.map⇥` chain map
+
+```js
+.map(${1:iterator})
+```
+
+#### `reduce⇥` reduce
+
+```js
+${1:iterable}.reduce((${2:previous}, ${3:current}) => {
+  ${0}
+}${4:, initial})
+```
+
+#### `.reduce⇥` chain reduce
+
+```js
+.reduce((${1:previous}, ${2:current}) => {
+  ${0}
+}${3:, initial})
+```
+
+#### `filter⇥` filter
+
+```js
+${1:iterable}.filter(${2:iterator})
+```
+
+#### `.filter⇥` chain filter
+
+```js
+.filter(${1:iterator})
+```
+
+#### `find⇥` find
+
+```js
+${1:iterable}.find(${2:iterator})
+```
+
+#### `.find⇥` chain find
+
+```js
+.find(${1:iterator})
+```
+
+#### `every⇥` every
+
+```js
+${1:iterable}.every(${2:iterator})
+```
+
+#### `.every⇥` chain every
+
+```js
+.every(${1:iterator})
+```
+
+#### `some⇥` some
+
+```js
+${1:iterable}.some(${2:iterator})
+```
+
+#### `.some⇥` chain some
+
+```js
+.some(${1:iterator})
+```
+
+**[back to top](#table-of-contents)**
+
+### modules-es2015
+> All [modules-es2015](./snippets/modules-es2015.cson) snippets
+
+#### `ex⇥` module export
+
+```js
+export ${1:member}
+```
+
+#### `exd⇥` module default export
+
+```js
+export default ${1:member}
+```
+
+#### `im⇥` import module
+
+```js
+import ${2:name} from '${1:pkg}'${3}
+```
+
+#### `ima⇥` import module as
+
+```js
+import ${2:*} as ${3:name} from '${1:pkg}'${4}
+```
+
+#### `imd⇥` import module destructured
+
+```js
+import { $2 } from '${1:pkg}'${3}
+```
+
+**[back to top](#table-of-contents)**
+
+### objects
+> All [objects](./snippets/objects.cson) snippets
+
+#### `kv⇥` key/value pair
+
+```js
+${1:key}: ${2:'value'}
+```
+
+#### `proto⇥` prototype method
+
+```js
+${1:ClassName}.prototype.${2:key} = ${3:value}
+```
+
+#### `.proto⇥` chain prototype method
+
+```js
+.prototype.${2:key} = ${3:value}
+```
+
+#### `xa⇥` extend-shallow
+
+> See [extend-shallow][] lib
+
+```js
+extend(${1:defaults}, ${2:sources})${0}
+```
+
+#### `oa⇥` Object.assign
+
+```js
+Object.assign(${1:dest}, ${2:source})${0}
+```
+
+#### `ok⇥` Object.keys
+
+```js
+Object.keys(${1:obj})${0}
 ```
 
 **[back to top](#table-of-contents)**
@@ -1142,3 +1149,4 @@ _Project scaffolded using [charlike][] cli._
 [standard-img]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 
 [extend-shallow]: https://github.com/jonschlinkert/extend-shallow
+[standard]: http://standardjs.com

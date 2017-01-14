@@ -72,7 +72,9 @@
       "once",
       "standard-version",
       "verb",
-      "verb-generate-readme"
+      "verb-generate-readme",
+      "extend-shallow",
+      "standard"
     ]
   },
   "engines": {
