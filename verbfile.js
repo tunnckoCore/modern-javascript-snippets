@@ -28,7 +28,7 @@ const generateSnippetDocs = (cb) => {
 
       for (let desc in file.contents) {
         const data = file.contents[desc]
-        buf = `${buf}#### \`${data.prefix}\` ${desc}`
+        buf = `${buf}#### \`${data.prefix}⇥\` ${desc}`
 
         if (data.prefix === 'xa') {
           buf = `${buf}\n\n> See [extend-shallow][] lib`
@@ -39,6 +39,8 @@ const generateSnippetDocs = (cb) => {
         fence += '```'
         buf = buf + fence + '\n\n'
       }
+
+      buf = `${buf}[back to ToC](#table-of-contents)\n\n`
     })
 
     cb(null, buf)

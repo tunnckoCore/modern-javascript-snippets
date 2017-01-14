@@ -18,21 +18,21 @@ You might also be interested in [always-done](https://github.com/hybridables/alw
   * [async](#async)
   * [classes](#classes)
   * [console](#console)
+  * [control-flow](#control-flow)
   * [declarations](#declarations)
   * [events](#events)
   * [functions](#functions)
   * [iterables](#iterables)
-  * [control-flow](#control-flow)
   * [json](#json)
   * [loops](#loops)
   * [misc](#misc)
   * [modules-commonjs](#modules-commonjs)
   * [modules-es2015](#modules-es2015)
-  * [returns](#returns)
   * [objects](#objects)
+  * [returns](#returns)
   * [testing](#testing)
-  * [types](#types)
   * [timers](#timers)
+  * [types](#types)
 - [Related](#related)
 - [Contributing](#contributing)
 - [Building docs](#building-docs)
@@ -54,52 +54,54 @@ $ apm install modern-javascript-snippets
 ### assert
 > All [assert](./snippets/assert.cson) snippets
 
-#### `ase` assert.strictEqual
+#### `ase⇥` assert.strictEqual
 
 ```js
 ${1:assert}.strictEqual(${2:actual}, ${3:expected})${0}
 ```
 
-#### `asn` assert.notStrictEqual
+#### `asn⇥` assert.notStrictEqual
 
 ```js
 ${1:assert}.notStrictEqual(${2:actual}, ${3:expected})${0}
 ```
 
-#### `asd` assert.deepStrictEqual
+#### `asd⇥` assert.deepStrictEqual
 
 ```js
 ${1:assert}.deepStrictEqual(${2:actual}, ${3:expected})${0}
 ```
 
-#### `asdn` assert.notDeepStrictEqual
+#### `asdn⇥` assert.notDeepStrictEqual
 
 ```js
 ${1:assert}.notDeepStrictEqual(${2:actual}, ${3:expected})${0}
 ```
 
-#### `asi` assert.ifError
+#### `asi⇥` assert.ifError
 
 ```js
 ${1:assert}.ifError(${2:err})${0}
 ```
 
-#### `ast` assert.throws
+#### `ast⇥` assert.throws
 
 ```js
 ${1:assert}.throws(${2:actual}, ${3:expected})${0}
 ```
 
+[back to ToC](#table-of-contents)
+
 ### async
 > All [async](./snippets/async.cson) snippets
 
-#### `cb` Node callback
+#### `cb⇥` Node callback
 
 ```js
 (err, ${1:value}) => {${0}}
 ```
 
-#### `p` Promise constructor
+#### `p⇥` Promise constructor
 
 ```js
 new Promise((resolve${1:, reject}) => {
@@ -107,34 +109,36 @@ new Promise((resolve${1:, reject}) => {
 })
 ```
 
-#### `then` Promise.then
+#### `then⇥` Promise.then
 
 ```js
 ${1:promise}.then((${2:value}) => {${0}})
 ```
 
-#### `.then` chain then
+#### `.then⇥` chain then
 
 ```js
 .then((${1:value}) => {${0}})
 ```
 
-#### `catch` Promise.catch
+#### `catch⇥` Promise.catch
 
 ```js
 ${1:promise}.catch((${2:err}) => {${0}})
 ```
 
-#### `.catch` chain catch
+#### `.catch⇥` chain catch
 
 ```js
 .catch((${1:err}) => {${0}})
 ```
 
+[back to ToC](#table-of-contents)
+
 ### classes
 > All [classes](./snippets/classes.cson) snippets
 
-#### `cs` class
+#### `cs⇥` class
 
 ```js
 class ${1:ClassName} {
@@ -144,7 +148,7 @@ class ${1:ClassName} {
 }
 ```
 
-#### `csx` class extends
+#### `csx⇥` class extends
 
 ```js
 class ${1:ClassName} extends ${2:BaseClass} {
@@ -155,7 +159,7 @@ class ${1:ClassName} extends ${2:BaseClass} {
 }
 ```
 
-#### `csm` class method
+#### `csm⇥` class method
 
 ```js
 ${1:name} (${2:args}) {
@@ -163,7 +167,7 @@ ${1:name} (${2:args}) {
 }
 ```
 
-#### `csi` es5 singleton class
+#### `csi⇥` es5 singleton class
 
 ```js
 function ${1:ClassName} (${2:args}) {
@@ -174,7 +178,7 @@ function ${1:ClassName} (${2:args}) {
 }
 ```
 
-#### `csf` es5 function class
+#### `csf⇥` es5 function class
 
 ```js
 function ${1:ClassName} (${2:args}) {
@@ -182,323 +186,41 @@ function ${1:ClassName} (${2:args}) {
 }
 ```
 
+[back to ToC](#table-of-contents)
+
 ### console
 > All [console](./snippets/console.cson) snippets
 
-#### `cl` console.log
+#### `cl⇥` console.log
 
 ```js
 console.log(${0})
 ```
 
-#### `ce` console.error
+#### `ce⇥` console.error
 
 ```js
 console.error(${0})
 ```
 
-#### `cw` console.warn
+#### `cw⇥` console.warn
 
 ```js
 console.warn(${0})
 ```
 
-#### `cd` console.dir
+#### `cd⇥` console.dir
 
 ```js
 console.dir(${0})
 ```
 
-### declarations
-> All [declarations](./snippets/declarations.cson) snippets
-
-#### `v` var statement
-
-```js
-var ${1:name}
-```
-
-#### `v=` var assignment
-
-```js
-var ${1:name} = ${2:value}
-```
-
-#### `l` let statement
-
-```js
-let ${1:name}
-```
-
-#### `l=` let assignment
-
-```js
-let ${1:name} = ${2:value}
-```
-
-#### `c` const statement
-
-```js
-const ${1:name}
-```
-
-#### `c=` const assignment
-
-```js
-const ${1:name} = ${2:value}
-```
-
-#### `cy` const yielded
-
-```js
-const ${1:name} = yield ${2:value}
-```
-
-#### `ca` const awaited
-
-```js
-const ${1:name} = await ${2:value}
-```
-
-#### `ly` let yielded
-
-```js
-let ${1:name} = yield ${2:value}
-```
-
-#### `la` let awaited
-
-```js
-let ${1:name} = await ${2:value}
-```
-
-#### `co` const object
-
-```js
-const ${1:name} = {
-  ${2}
-}
-```
-
-#### `ca` const array
-
-```js
-const ${1:name} = [
-  ${2}
-]
-```
-
-### events
-> All [events](./snippets/events.cson) snippets
-
-#### `on` on event handler
-
-```js
-${1:emitter}.on('${2:event}', ${3:args})
-```
-
-#### `.on` chain .on
-
-```js
-.on('${1:event}', ${2:handler})
-```
-
-#### `once` once event handler
-
-```js
-${1:emitter}.once('${2:event}', ${3:args})
-```
-
-#### `.once` chain .once
-
-```js
-.once('${1:event}', ${2:handler})
-```
-
-#### `emit` emit event
-
-```js
-${1:emitter}.emit('${2:event}', ${3:args})
-```
-
-#### `.emit` chain .emit
-
-```js
-.emit('${1:event}', ${2:args})
-```
-
-### functions
-> All [functions](./snippets/functions.cson) snippets
-
-#### `f` anonymous function
-
-```js
-function (${1:args}) {${0}}
-```
-
-#### `fn` named function
-
-```js
-function ${1:name} (${2:args}) {${0}}
-```
-
-#### `asf` async anonymous function
-
-```js
-async function (${1:args}) {${0}}
-```
-
-#### `asfn` async named function
-
-```js
-async function ${1:name} (${2:args}) {${0}}
-```
-
-#### `af` arrow function
-
-```js
-(${1:args}) => ${2:statement}
-```
-
-#### `afn` arrow fn with body
-
-```js
-(${1:args}) => {${0}}
-```
-
-#### `gf` generator
-
-```js
-function * (${1:args}) {${0}}
-```
-
-#### `gfn` named generator
-
-```js
-function * ${1:name}(${2:args}) {${0}}
-```
-
-#### `iife` immediately-invoked function expression
-
-```js
-;(function (${1:args}) {
-  ${0}
-})(${2})
-```
-
-#### `fa` function apply
-
-```js
-${1:fn}.apply(${2:this}, ${3:args})
-```
-
-#### `fc` function call
-
-```js
-${1:fn}.call(${2:this}, ${3:args})
-```
-
-#### `fb` function bind
-
-```js
-${1:fn}.bind(${2:this}, ${3:args})
-```
-
-### iterables
-> All [iterables](./snippets/iterables.cson) snippets
-
-#### `fe` forEach loop
-
-```js
-${1:iterable}.forEach(${2:iterator})
-```
-
-#### `.fe` chain forEach
-
-```js
-.forEach(${1:iterator})
-```
-
-#### `map` map
-
-```js
-${1:iterable}.map(${2:iterator})
-```
-
-#### `.map` chain map
-
-```js
-.map(${1:iterator})
-```
-
-#### `reduce` reduce
-
-```js
-${1:iterable}.reduce((${2:previous}, ${3:current}) => {
-  ${0}
-}${4:, initial})
-```
-
-#### `.reduce` chain reduce
-
-```js
-.reduce((${1:previous}, ${2:current}) => {
-  ${0}
-}${3:, initial})
-```
-
-#### `filter` filter
-
-```js
-${1:iterable}.filter(${2:iterator})
-```
-
-#### `.filter` chain filter
-
-```js
-.filter(${1:iterator})
-```
-
-#### `find` find
-
-```js
-${1:iterable}.find(${2:iterator})
-```
-
-#### `.find` chain find
-
-```js
-.find(${1:iterator})
-```
-
-#### `every` every
-
-```js
-${1:iterable}.every(${2:iterator})
-```
-
-#### `.every` chain every
-
-```js
-.every(${1:iterator})
-```
-
-#### `some` some
-
-```js
-${1:iterable}.some(${2:iterator})
-```
-
-#### `.some` chain some
-
-```js
-.some(${1:iterator})
-```
+[back to ToC](#table-of-contents)
 
 ### control-flow
 > All [control-flow](./snippets/control-flow.cson) snippets
 
-#### `if` if statement
+#### `if⇥` if statement
 
 ```js
 if (${1:condition}) {
@@ -506,7 +228,7 @@ if (${1:condition}) {
 }
 ```
 
-#### `el` else statement
+#### `el⇥` else statement
 
 ```js
 else {
@@ -514,7 +236,7 @@ else {
 }
 ```
 
-#### `ife` if/else statement
+#### `ife⇥` if/else statement
 
 ```js
 if (${1:condition}) {
@@ -524,7 +246,7 @@ if (${1:condition}) {
 }
 ```
 
-#### `ei` else if statement
+#### `ei⇥` else if statement
 
 ```js
 else if (${1:condition}) {
@@ -532,7 +254,7 @@ else if (${1:condition}) {
 }
 ```
 
-#### `tc` try/catch
+#### `tc⇥` try/catch
 
 ```js
 try {
@@ -542,7 +264,7 @@ try {
 }
 ```
 
-#### `tf` try/finally
+#### `tf⇥` try/finally
 
 ```js
 try {
@@ -552,7 +274,7 @@ try {
 }
 ```
 
-#### `tcf` try/catch/finally
+#### `tcf⇥` try/catch/finally
 
 ```js
 try {
@@ -564,31 +286,329 @@ try {
 }
 ```
 
+[back to ToC](#table-of-contents)
+
+### declarations
+> All [declarations](./snippets/declarations.cson) snippets
+
+#### `v⇥` var statement
+
+```js
+var ${1:name}
+```
+
+#### `v=⇥` var assignment
+
+```js
+var ${1:name} = ${2:value}
+```
+
+#### `l⇥` let statement
+
+```js
+let ${1:name}
+```
+
+#### `l=⇥` let assignment
+
+```js
+let ${1:name} = ${2:value}
+```
+
+#### `c⇥` const statement
+
+```js
+const ${1:name}
+```
+
+#### `c=⇥` const assignment
+
+```js
+const ${1:name} = ${2:value}
+```
+
+#### `cy⇥` const yielded
+
+```js
+const ${1:name} = yield ${2:value}
+```
+
+#### `ca⇥` const awaited
+
+```js
+const ${1:name} = await ${2:value}
+```
+
+#### `ly⇥` let yielded
+
+```js
+let ${1:name} = yield ${2:value}
+```
+
+#### `la⇥` let awaited
+
+```js
+let ${1:name} = await ${2:value}
+```
+
+#### `co⇥` const object
+
+```js
+const ${1:name} = {
+  ${2}
+}
+```
+
+#### `ca⇥` const array
+
+```js
+const ${1:name} = [
+  ${2}
+]
+```
+
+[back to ToC](#table-of-contents)
+
+### events
+> All [events](./snippets/events.cson) snippets
+
+#### `on⇥` on event handler
+
+```js
+${1:emitter}.on('${2:event}', ${3:args})
+```
+
+#### `.on⇥` chain .on
+
+```js
+.on('${1:event}', ${2:handler})
+```
+
+#### `once⇥` once event handler
+
+```js
+${1:emitter}.once('${2:event}', ${3:args})
+```
+
+#### `.once⇥` chain .once
+
+```js
+.once('${1:event}', ${2:handler})
+```
+
+#### `emit⇥` emit event
+
+```js
+${1:emitter}.emit('${2:event}', ${3:args})
+```
+
+#### `.emit⇥` chain .emit
+
+```js
+.emit('${1:event}', ${2:args})
+```
+
+[back to ToC](#table-of-contents)
+
+### functions
+> All [functions](./snippets/functions.cson) snippets
+
+#### `f⇥` anonymous function
+
+```js
+function (${1:args}) {${0}}
+```
+
+#### `fn⇥` named function
+
+```js
+function ${1:name} (${2:args}) {${0}}
+```
+
+#### `asf⇥` async anonymous function
+
+```js
+async function (${1:args}) {${0}}
+```
+
+#### `asfn⇥` async named function
+
+```js
+async function ${1:name} (${2:args}) {${0}}
+```
+
+#### `af⇥` arrow function
+
+```js
+(${1:args}) => ${2:statement}
+```
+
+#### `afn⇥` arrow fn with body
+
+```js
+(${1:args}) => {${0}}
+```
+
+#### `gf⇥` generator
+
+```js
+function * (${1:args}) {${0}}
+```
+
+#### `gfn⇥` named generator
+
+```js
+function * ${1:name}(${2:args}) {${0}}
+```
+
+#### `iife⇥` immediately-invoked function expression
+
+```js
+;(function (${1:args}) {
+  ${0}
+})(${2})
+```
+
+#### `fa⇥` function apply
+
+```js
+${1:fn}.apply(${2:this}, ${3:args})
+```
+
+#### `fc⇥` function call
+
+```js
+${1:fn}.call(${2:this}, ${3:args})
+```
+
+#### `fb⇥` function bind
+
+```js
+${1:fn}.bind(${2:this}, ${3:args})
+```
+
+[back to ToC](#table-of-contents)
+
+### iterables
+> All [iterables](./snippets/iterables.cson) snippets
+
+#### `fe⇥` forEach loop
+
+```js
+${1:iterable}.forEach(${2:iterator})
+```
+
+#### `.fe⇥` chain forEach
+
+```js
+.forEach(${1:iterator})
+```
+
+#### `map⇥` map
+
+```js
+${1:iterable}.map(${2:iterator})
+```
+
+#### `.map⇥` chain map
+
+```js
+.map(${1:iterator})
+```
+
+#### `reduce⇥` reduce
+
+```js
+${1:iterable}.reduce((${2:previous}, ${3:current}) => {
+  ${0}
+}${4:, initial})
+```
+
+#### `.reduce⇥` chain reduce
+
+```js
+.reduce((${1:previous}, ${2:current}) => {
+  ${0}
+}${3:, initial})
+```
+
+#### `filter⇥` filter
+
+```js
+${1:iterable}.filter(${2:iterator})
+```
+
+#### `.filter⇥` chain filter
+
+```js
+.filter(${1:iterator})
+```
+
+#### `find⇥` find
+
+```js
+${1:iterable}.find(${2:iterator})
+```
+
+#### `.find⇥` chain find
+
+```js
+.find(${1:iterator})
+```
+
+#### `every⇥` every
+
+```js
+${1:iterable}.every(${2:iterator})
+```
+
+#### `.every⇥` chain every
+
+```js
+.every(${1:iterator})
+```
+
+#### `some⇥` some
+
+```js
+${1:iterable}.some(${2:iterator})
+```
+
+#### `.some⇥` chain some
+
+```js
+.some(${1:iterator})
+```
+
+[back to ToC](#table-of-contents)
+
 ### json
 > All [json](./snippets/json.cson) snippets
 
-#### `;` JSON key/value pair
+#### `;⇥` JSON key/value pair
 
 ```js
 "${1:key}": "${2:value}"
 ```
 
-#### `;a` JSON array
+#### `;a⇥` JSON array
 
 ```js
 "${1:key}": ["${2:values}"]
 ```
 
-#### `;t` JSON true
+#### `;t⇥` JSON true
 
 ```js
 "${1:key}": true
 ```
 
+[back to ToC](#table-of-contents)
+
 ### loops
 > All [loops](./snippets/loops.cson) snippets
 
-#### `fl` for loop
+#### `fl⇥` for loop
 
 ```js
 for (let ${1:i} = 0; ${1:i} < ${2:iterable}${3:.length}; ${1:i}++) {
@@ -596,7 +616,7 @@ for (let ${1:i} = 0; ${1:i} < ${2:iterable}${3:.length}; ${1:i}++) {
 }
 ```
 
-#### `fi` for in loop
+#### `fi⇥` for in loop
 
 ```js
 for (let ${1:key} in ${2:source}) {
@@ -606,7 +626,7 @@ for (let ${1:key} in ${2:source}) {
 }
 ```
 
-#### `fo` for of loop
+#### `fo⇥` for of loop
 
 ```js
 for (let ${1:key} of ${2:source}) {
@@ -614,7 +634,7 @@ for (let ${1:key} of ${2:source}) {
 }
 ```
 
-#### `wl` while loop
+#### `wl⇥` while loop
 
 ```js
 while (${1:condition}) {
@@ -622,7 +642,7 @@ while (${1:condition}) {
 }
 ```
 
-#### `wf` fast while loop
+#### `wf⇥` fast while loop
 
 ```js
 let len = ${1:iterable}.length
@@ -634,46 +654,48 @@ while (i < len) {
 }
 ```
 
+[back to ToC](#table-of-contents)
+
 ### misc
 > All [misc](./snippets/misc.cson) snippets
 
-#### `us` use strict
+#### `us⇥` use strict
 
 ```js
 'use strict'
 ```
 
-#### `self` const self this
+#### `self⇥` const self this
 
 ```js
 const self = this
 ```
 
-#### `ye` yield
+#### `ye⇥` yield
 
 ```js
 yield ${0}
 ```
 
-#### `aw` await
+#### `aw⇥` await
 
 ```js
 await ${0}
 ```
 
-#### `pe` process.exit
+#### `pe⇥` process.exit
 
 ```js
 process.exit(${1:code})${0}
 ```
 
-#### `thn` throw new error
+#### `thn⇥` throw new error
 
 ```js
 throw new ${1:TypeError}('${2:message}')${3}
 ```
 
-#### `iferr` if not typeof then throw error
+#### `iferr⇥` if not typeof then throw error
 
 ```js
 if (typeof ${1:actual} !== ${2:expected}) {
@@ -681,19 +703,19 @@ if (typeof ${1:actual} !== ${2:expected}) {
 }${5}
 ```
 
-#### `js` JSON.stringify()
+#### `js⇥` JSON.stringify()
 
 ```js
 JSON.stringify($0)
 ```
 
-#### `jp` JSON.parse()
+#### `jp⇥` JSON.parse()
 
 ```js
 JSON.parse($0)
 ```
 
-#### `afi` arrayify
+#### `afi⇥` arrayify
 
 ```js
 /* istanbul ignore next */
@@ -704,7 +726,7 @@ const arrayify = (val) => {
 }
 ```
 
-#### `fixture` fixture (useful for assert.throws)
+#### `fixture⇥` fixture (useful for assert.throws)
 
 ```js
 function fixture () {
@@ -712,153 +734,106 @@ function fixture () {
 }${0}
 ```
 
+[back to ToC](#table-of-contents)
+
 ### modules-commonjs
 > All [modules-commonjs](./snippets/modules-commonjs.cson) snippets
 
-#### `req` require module
+#### `req⇥` require module
 
 ```js
 require('${1:pkg}')${0}
 ```
 
-#### `rr` const require package
+#### `rr⇥` const require package
 
 ```js
 const ${2:name} = require('${1:pkg}')${0}
 ```
 
-#### `em` exports.member
+#### `em⇥` exports.member
 
 ```js
 exports.${1:member} = ${2:value}
 ```
 
-#### `emd` exports default
+#### `emd⇥` exports default
 
 ```js
 exports['default'] = ${1:value}
 ```
 
-#### `me` module.exports
+#### `me⇥` module.exports
 
 ```js
 module.exports = ${1:value}
 ```
 
-#### `med` module exports and exports default
+#### `med⇥` module exports and exports default
 
 ```js
 module.exports = exports['default'] = ${1:value}
 ```
 
+[back to ToC](#table-of-contents)
+
 ### modules-es2015
 > All [modules-es2015](./snippets/modules-es2015.cson) snippets
 
-#### `ex` module export
+#### `ex⇥` module export
 
 ```js
 export ${1:member}
 ```
 
-#### `exd` module default export
+#### `exd⇥` module default export
 
 ```js
 export default ${1:member}
 ```
 
-#### `im` import module
+#### `im⇥` import module
 
 ```js
 import ${2:name} from '${1:pkg}'${3}
 ```
 
-#### `ima` import module as
+#### `ima⇥` import module as
 
 ```js
 import ${2:*} as ${3:name} from '${1:pkg}'${4}
 ```
 
-#### `imd` import module destructured
+#### `imd⇥` import module destructured
 
 ```js
 import { $2 } from '${1:pkg}'${3}
 ```
 
-### returns
-> All [returns](./snippets/returns.cson) snippets
-
-#### `r` return
-
-```js
-return ${0}
-```
-
-#### `rth` return this
-
-```js
-return this
-```
-
-#### `rn` return null
-
-```js
-return null
-```
-
-#### `rt` return true
-
-```js
-return true
-```
-
-#### `rf` return false
-
-```js
-return false
-```
-
-#### `r0` return 0
-
-```js
-return 0
-```
-
-#### `r-1` return -1
-
-```js
-return -1
-```
-
-#### `rp` return promise
-
-```js
-return new Promise((resolve${1:, reject}) => {
-  ${0}
-})
-```
+[back to ToC](#table-of-contents)
 
 ### objects
 > All [objects](./snippets/objects.cson) snippets
 
-#### `kv` key/value pair
+#### `kv⇥` key/value pair
 
 ```js
 ${1:key}: ${2:'value'}
 ```
 
-#### `proto` prototype method
+#### `proto⇥` prototype method
 
 ```js
 ${1:ClassName}.prototype.${2:key} = ${3:value}
 ```
 
-#### `.proto` chain prototype method
+#### `.proto⇥` chain prototype method
 
 ```js
 .prototype.${2:key} = ${3:value}
 ```
 
-#### `xa` extend-shallow
+#### `xa⇥` extend-shallow
 
 > See [extend-shallow][] lib
 
@@ -866,22 +841,79 @@ ${1:ClassName}.prototype.${2:key} = ${3:value}
 extend(${1:defaults}, ${2:sources})${0}
 ```
 
-#### `oa` Object.assign
+#### `oa⇥` Object.assign
 
 ```js
 Object.assign(${1:dest}, ${2:source})${0}
 ```
 
-#### `ok` Object.keys
+#### `ok⇥` Object.keys
 
 ```js
 Object.keys(${1:obj})${0}
 ```
 
+[back to ToC](#table-of-contents)
+
+### returns
+> All [returns](./snippets/returns.cson) snippets
+
+#### `r⇥` return
+
+```js
+return ${0}
+```
+
+#### `rth⇥` return this
+
+```js
+return this
+```
+
+#### `rn⇥` return null
+
+```js
+return null
+```
+
+#### `rt⇥` return true
+
+```js
+return true
+```
+
+#### `rf⇥` return false
+
+```js
+return false
+```
+
+#### `r0⇥` return 0
+
+```js
+return 0
+```
+
+#### `r-1⇥` return -1
+
+```js
+return -1
+```
+
+#### `rp⇥` return promise
+
+```js
+return new Promise((resolve${1:, reject}) => {
+  ${0}
+})
+```
+
+[back to ToC](#table-of-contents)
+
 ### testing
 > All [testing](./snippets/testing.cson) snippets
 
-#### `ita` async test (mocha/mukla)
+#### `ita⇥` async test (mocha/mukla)
 
 ```js
 ${1:it}('${2:description}', (${3:done}) => {
@@ -889,7 +921,7 @@ ${1:it}('${2:description}', (${3:done}) => {
 })
 ```
 
-#### `its` synchronous test (mocha/mukla)
+#### `its⇥` synchronous test (mocha/mukla)
 
 ```js
 ${1:it}('${2:description}', () => {
@@ -897,7 +929,7 @@ ${1:it}('${2:description}', () => {
 })
 ```
 
-#### `te` tape-style test
+#### `te⇥` tape-style test
 
 ```js
 ${1:test}('${2:description}', (${3:t}) => {
@@ -905,91 +937,12 @@ ${1:test}('${2:description}', (${3:t}) => {
 })
 ```
 
-### types
-> All [types](./snippets/types.cson) snippets
-
-#### `S` String
-
-```js
-String
-```
-
-#### `Sy` Symbol
-
-```js
-Symbol('${1:name}')
-```
-
-#### `B` Boolean
-
-```js
-Boolean
-```
-
-#### `N` Number
-
-```js
-Number
-```
-
-#### `O` Object
-
-```js
-Object
-```
-
-#### `A` Array
-
-```js
-Array
-```
-
-#### `D` Date
-
-```js
-Date
-```
-
-#### `Rx` RegExp
-
-```js
-RegExp
-```
-
-#### `P` Promise
-
-```js
-Promise
-```
-
-#### `tof` typeof equal to
-
-```js
-typeof ${1:source} === '${2:value}'
-```
-
-#### `tofi` typeof not equal to
-
-```js
-typeof ${1:source} !== '${2:value}'
-```
-
-#### `iof` instanceof
-
-```js
-${1:source} instanceof ${2:Object}
-```
-
-#### `ia` Array.isArray()
-
-```js
-Array.isArray(${1:source})
-```
+[back to ToC](#table-of-contents)
 
 ### timers
 > All [timers](./snippets/timers.cson) snippets
 
-#### `st` setTimeout
+#### `st⇥` setTimeout
 
 ```js
 setTimeout(() => {
@@ -997,7 +950,7 @@ setTimeout(() => {
 }, ${1:delay})
 ```
 
-#### `nt` process.nextTick
+#### `nt⇥` process.nextTick
 
 ```js
 process.nextTick(() => {
@@ -1005,7 +958,7 @@ process.nextTick(() => {
 }${1:, args})
 ```
 
-#### `si` setInterval
+#### `si⇥` setInterval
 
 ```js
 setInterval(() => {
@@ -1013,13 +966,98 @@ setInterval(() => {
 }, ${1:delay})
 ```
 
-#### `sim` setImmediate
+#### `sim⇥` setImmediate
 
 ```js
 setImmediate(() => {
   ${0}
 })
 ```
+
+[back to ToC](#table-of-contents)
+
+### types
+> All [types](./snippets/types.cson) snippets
+
+#### `S⇥` String
+
+```js
+String
+```
+
+#### `Sy⇥` Symbol
+
+```js
+Symbol('${1:name}')
+```
+
+#### `B⇥` Boolean
+
+```js
+Boolean
+```
+
+#### `N⇥` Number
+
+```js
+Number
+```
+
+#### `O⇥` Object
+
+```js
+Object
+```
+
+#### `A⇥` Array
+
+```js
+Array
+```
+
+#### `D⇥` Date
+
+```js
+Date
+```
+
+#### `Rx⇥` RegExp
+
+```js
+RegExp
+```
+
+#### `P⇥` Promise
+
+```js
+Promise
+```
+
+#### `tof⇥` typeof equal to
+
+```js
+typeof ${1:source} === '${2:value}'
+```
+
+#### `tofi⇥` typeof not equal to
+
+```js
+typeof ${1:source} !== '${2:value}'
+```
+
+#### `iof⇥` instanceof
+
+```js
+${1:source} instanceof ${2:Object}
+```
+
+#### `ia⇥` Array.isArray()
+
+```js
+Array.isArray(${1:source})
+```
+
+[back to ToC](#table-of-contents)
 
 ## Related
 - [always-done](https://www.npmjs.com/package/always-done): Handle completion and errors with elegance! Support for streams, callbacks, promises, child processes, async/await and sync functions. A drop-in replacement… [more](https://github.com/hybridables/always-done#readme) | [homepage](https://github.com/hybridables/always-done#readme "Handle completion and errors with elegance! Support for streams, callbacks, promises, child processes, async/await and sync functions. A drop-in replacement for [async-done][] - pass 100% of its tests plus more")

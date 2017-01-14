@@ -8,10 +8,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "echo 'ok'",
+    "test": "verb",
     "prerelease": "npm test",
     "release": "standard-version --sign --no-verify",
-    "precommit": "git add --all",
+    "precommit": "npm test && git add --all",
     "commit": "git-cz"
   },
   "dependencies": {},
