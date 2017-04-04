@@ -27,7 +27,7 @@
     "pify": "^2.3.0",
     "pre-commit": "^1.2.2",
     "standard-version": "^4.0.0",
-    "verb-generate-readme": "^0.4.1"
+    "verb-generate-readme": "^0.5.0"
   },
   "files": [
     "index.js",
