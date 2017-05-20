@@ -1,7 +1,7 @@
 {
   "name": "modern-javascript-snippets",
   "displayName": "Modern (ES6+) Javascript Snippets",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "publisher": "tunnckocore",
   "description": "Atom & VSCode - Modern javascript snippets for better productivity with support for JavaScript, Babel, TypeScript, JSX and semicolon-less code.",
   "repository": "https://github.com/tunnckoCore/modern-javascript-snippets",
