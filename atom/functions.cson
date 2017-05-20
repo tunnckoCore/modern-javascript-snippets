@@ -25,7 +25,7 @@
     body: "function * (${1:args}) {${0}}"
   "named generator":
     prefix: "gfn"
-    body: "function * ${1:name}(${2:args}) {${0}}"
+    body: "function * ${1:name} (${2:args}) {${0}}"
 
   "immediately-invoked function expression":
     prefix: "iife"

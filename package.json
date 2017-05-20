@@ -1,14 +1,15 @@
 {
   "name": "modern-javascript-snippets",
+  "displayName": "Modern (ES6+) Javascript Snippets",
   "version": "1.0.1",
-  "description": "Modern javascript snippets for better productivity with support for JavaScript, Babel, TypeScript, JSX and semicolon-less code.",
+  "publisher": "tunnckocore",
+  "description": "Atom & VSCode - Modern javascript snippets for better productivity with support for JavaScript, Babel, TypeScript, JSX and semicolon-less code.",
   "repository": "https://github.com/tunnckoCore/modern-javascript-snippets",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://i.am.charlike.online)",
   "precommit.silent": true,
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "echo ok",
+    "test": "standard verbfile.js --fix",
     "prerelease": "npm test",
     "release": "standard-version --sign --no-verify",
     "precommit": "git add --all",
@@ -16,22 +17,23 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "commitizen": "^2.9.2",
+    "camelcase": "^4.1.0",
+    "commitizen": "^2.9.6",
     "cson-parser": "^1.3.5",
-    "cz-conventional-changelog": "^1.2.0",
-    "each-promise": "^1.0.2",
-    "eslint": "^3.13.1",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1",
+    "cz-conventional-changelog": "^2.0.0",
+    "each-promise": "^1.0.5",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "pify": "^2.3.0",
     "pre-commit": "^1.2.2",
+    "standard": "^10.0.2",
     "standard-version": "^4.0.0",
-    "verb-generate-readme": "^0.4.1"
+    "verb-generate-readme": "^0.6.0"
   },
   "files": [
-    "index.js",
-    "snippets/"
+    "atom/"
   ],
   "keywords": [],
   "config": {
@@ -53,6 +55,8 @@
     "related": {
       "list": [
         "always-done",
+        "dush",
+        "dush-router",
         "minibase",
         "try-catch-core"
       ],
@@ -79,6 +83,34 @@
   "engines": {
     "node": ">=4",
     "npm": ">=2",
-    "atom": ">=1.0.0"
+    "atom": ">=1.0.0",
+    "vscode": ">=1.0.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./vscode/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vscode/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./vscode/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./vscode/snippets.json"
+      },
+      {
+        "language": "html",
+        "path": "./vscode/snippets.json"
+      }
+    ]
   }
 }

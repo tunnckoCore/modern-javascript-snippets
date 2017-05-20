@@ -1,11 +1,18 @@
 # modern-javascript-snippets
 
-> Modern javascript snippets for better productivity with support for JavaScript, Babel, TypeScript, JSX and semicolon-less code.
+> Atom & VSCode - Modern javascript snippets for better productivity with support for JavaScript, Babel, TypeScript, JSX and semicolon-less code.
 
 [![atom package manager][apm-img]][apm-url]
 [![apm downloads][downloads-img]][downloads-url]
+
+[![vscode version][vscode-version-img]][vscode-version-url]
+[![vscode installs][vscode-installs-img]][vscode-installs-url]
+
 [![dependency status][david-img]][david-url]
 [![standard code style][standard-img]][standard-url]
+
+[![commitizen friendly][czfriendly-img]][czfriendly-url] 
+[![greenkeeper friendly][gkfriendly-img]][gkfriendly-url] 
 
 You might also be interested in [always-done](https://github.com/hybridables/always-done#readme).
 
@@ -17,6 +24,7 @@ please open an issue if you want such thing.
 The documentation is built and fully automated using [verb][], including [table of contents](#table-of-contents) and even the [snippets docs](#snippets).
 
 ## Table of Contents
+
 - [Install](#install)
 - [Snippets](#snippets)
   * [assert](#assert)
@@ -54,10 +62,16 @@ Install with [apm](https://atom.io/packages) _(Atom Editor's package manager)_
 $ apm install modern-javascript-snippets
 ```
 
+Or launch [VSCode](https://code.visualstudio.com/) Quick Open (`Ctrl+P`), paste the following command, and press enter.
+
+```
+ext install modern-javascript-snippets
+```
+
 ## Snippets
 
 ### assert
-> All [assert](./snippets/assert.cson) snippets
+> All [assert](././atom/assert.cson) snippets
 
 #### `ase⇥` assert.strictEqual
 
@@ -98,7 +112,7 @@ ${1:assert}.throws(${2:actual}, ${3:expected})${0}
 **[back to top](#readme)**
 
 ### async
-> All [async](./snippets/async.cson) snippets
+> All [async](././atom/async.cson) snippets
 
 #### `cb⇥` Node callback
 
@@ -141,7 +155,7 @@ ${1:promise}.catch((${2:err}) => {${0}})
 **[back to top](#readme)**
 
 ### classes
-> All [classes](./snippets/classes.cson) snippets
+> All [classes](././atom/classes.cson) snippets
 
 #### `cs⇥` class
 
@@ -194,7 +208,7 @@ function ${1:ClassName} (${2:args}) {
 **[back to top](#readme)**
 
 ### console
-> All [console](./snippets/console.cson) snippets
+> All [console](././atom/console.cson) snippets
 
 #### `cl⇥` console.log
 
@@ -223,7 +237,7 @@ console.dir(${0})
 **[back to top](#readme)**
 
 ### control-flow
-> All [control-flow](./snippets/control-flow.cson) snippets
+> All [control-flow](././atom/control-flow.cson) snippets
 
 #### `if⇥` if statement
 
@@ -294,7 +308,7 @@ try {
 **[back to top](#readme)**
 
 ### declarations
-> All [declarations](./snippets/declarations.cson) snippets
+> All [declarations](././atom/declarations.cson) snippets
 
 #### `v⇥` var statement
 
@@ -375,7 +389,7 @@ const ${1:name} = [
 **[back to top](#readme)**
 
 ### events
-> All [events](./snippets/events.cson) snippets
+> All [events](././atom/events.cson) snippets
 
 #### `on⇥` on event handler
 
@@ -416,7 +430,7 @@ ${1:emitter}.emit('${2:event}', ${3:args})
 **[back to top](#readme)**
 
 ### functions
-> All [functions](./snippets/functions.cson) snippets
+> All [functions](././atom/functions.cson) snippets
 
 #### `f⇥` anonymous function
 
@@ -463,7 +477,7 @@ function * (${1:args}) {${0}}
 #### `gfn⇥` named generator
 
 ```js
-function * ${1:name}(${2:args}) {${0}}
+function * ${1:name} (${2:args}) {${0}}
 ```
 
 #### `iife⇥` immediately-invoked function expression
@@ -495,7 +509,7 @@ ${1:fn}.bind(${2:this}, ${3:args})
 **[back to top](#readme)**
 
 ### iterables
-> All [iterables](./snippets/iterables.cson) snippets
+> All [iterables](././atom/iterables.cson) snippets
 
 #### `fe⇥` forEach loop
 
@@ -588,7 +602,7 @@ ${1:iterable}.some(${2:iterator})
 **[back to top](#readme)**
 
 ### json
-> All [json](./snippets/json.cson) snippets
+> All [json](././atom/json.cson) snippets
 
 #### `;⇥` JSON key/value pair
 
@@ -611,7 +625,7 @@ ${1:iterable}.some(${2:iterator})
 **[back to top](#readme)**
 
 ### loops
-> All [loops](./snippets/loops.cson) snippets
+> All [loops](././atom/loops.cson) snippets
 
 #### `fl⇥` for loop
 
@@ -662,7 +676,7 @@ while (i < len) {
 **[back to top](#readme)**
 
 ### misc
-> All [misc](./snippets/misc.cson) snippets
+> All [misc](././atom/misc.cson) snippets
 
 #### `us⇥` use strict
 
@@ -742,7 +756,7 @@ function fixture () {
 **[back to top](#readme)**
 
 ### modules-commonjs
-> All [modules-commonjs](./snippets/modules-commonjs.cson) snippets
+> All [modules-commonjs](././atom/modules-commonjs.cson) snippets
 
 #### `req⇥` require module
 
@@ -783,7 +797,7 @@ module.exports = exports['default'] = ${1:value}
 **[back to top](#readme)**
 
 ### modules-es2015
-> All [modules-es2015](./snippets/modules-es2015.cson) snippets
+> All [modules-es2015](././atom/modules-es2015.cson) snippets
 
 #### `ex⇥` module export
 
@@ -818,7 +832,7 @@ import { $2 } from '${1:pkg}'${3}
 **[back to top](#readme)**
 
 ### objects
-> All [objects](./snippets/objects.cson) snippets
+> All [objects](././atom/objects.cson) snippets
 
 #### `kv⇥` key/value pair
 
@@ -861,7 +875,7 @@ Object.keys(${1:obj})${0}
 **[back to top](#readme)**
 
 ### returns
-> All [returns](./snippets/returns.cson) snippets
+> All [returns](././atom/returns.cson) snippets
 
 #### `r⇥` return
 
@@ -916,7 +930,7 @@ return new Promise((resolve${1:, reject}) => {
 **[back to top](#readme)**
 
 ### testing
-> All [testing](./snippets/testing.cson) snippets
+> All [testing](././atom/testing.cson) snippets
 
 #### `ita⇥` async test (mocha/mukla)
 
@@ -945,7 +959,7 @@ ${1:test}('${2:description}', (${3:t}) => {
 **[back to top](#readme)**
 
 ### timers
-> All [timers](./snippets/timers.cson) snippets
+> All [timers](././atom/timers.cson) snippets
 
 #### `st⇥` setTimeout
 
@@ -982,7 +996,7 @@ setImmediate(() => {
 **[back to top](#readme)**
 
 ### types
-> All [types](./snippets/types.cson) snippets
+> All [types](././atom/types.cson) snippets
 
 #### `S⇥` String
 
@@ -1066,12 +1080,14 @@ Array.isArray(${1:source})
 
 ## Related
 - [always-done](https://www.npmjs.com/package/always-done): Handle completion and errors with elegance! Support for streams, callbacks, promises, child processes, async/await and sync functions. A drop-in replacement… [more](https://github.com/hybridables/always-done#readme) | [homepage](https://github.com/hybridables/always-done#readme "Handle completion and errors with elegance! Support for streams, callbacks, promises, child processes, async/await and sync functions. A drop-in replacement for [async-done][] - pass 100% of its tests plus more")
+- [dush-router](https://www.npmjs.com/package/dush-router): A simple regex-based router for `dush`, `base`, `minibase` and anything based on them. Works on Browser and Node.js | [homepage](https://github.com/tunnckocore/dush-router#readme "A simple regex-based router for `dush`, `base`, `minibase` and anything based on them. Works on Browser and Node.js")
+- [dush](https://www.npmjs.com/package/dush): Microscopic & functional event emitter in ~350 bytes, extensible through plugins | [homepage](https://github.com/tunnckocore/dush#readme "Microscopic & functional event emitter in ~350 bytes, extensible through plugins")
 - [minibase](https://www.npmjs.com/package/minibase): Minimalist alternative for Base. Build complex APIs with small units called plugins. Works well with most of the already existing… [more](https://github.com/node-minibase/minibase#readme) | [homepage](https://github.com/node-minibase/minibase#readme "Minimalist alternative for Base. Build complex APIs with small units called plugins. Works well with most of the already existing [base][] plugins.")
 - [try-catch-core](https://www.npmjs.com/package/try-catch-core): Low-level package to handle completion and errors of sync or asynchronous functions, using [once][] and [dezalgo][] libs. Useful for and… [more](https://github.com/hybridables/try-catch-core#readme) | [homepage](https://github.com/hybridables/try-catch-core#readme "Low-level package to handle completion and errors of sync or asynchronous functions, using [once][] and [dezalgo][] libs. Useful for and used in higher-level libs such as [always-done][] to handle completion of anything.")
 
 ## Contributing
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/modern-javascript-snippets/issues/new).  
-Please read the [contributing guidelines](CONTRIBUTING.md) for advice on opening issues, pull requests, and coding standards.  
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/modern-javascript-snippets/issues/new).
+Please read the [contributing guidelines](CONTRIBUTING.md) for advice on opening issues, pull requests, and coding standards.
 If you need some help and can spent some cash, feel free to [contact me at CodeMentor.io](https://www.codementor.io/tunnckocore?utm_source=github&utm_medium=button&utm_term=tunnckocore&utm_campaign=github) too.
 
 **In short:** If you want to contribute to that project, please follow these things
@@ -1107,23 +1123,23 @@ $ npm install && npm test
 + [codementor/tunnckoCore](https://codementor.io/tunnckoCore)
 
 ## License
-Copyright © 2016-2017, [Charlike Mike Reagent](http://i.am.charlike.online). Released under the [MIT license](LICENSE).
+Copyright © 2016-2017, [Charlike Mike Reagent](http://i.am.charlike.online). Released under the [MIT License](LICENSE).
 
 ***
 
-_This file was generated by [verb-generate-readme](https://github.com/verbose/verb-generate-readme), v0.4.1, on January 15, 2017._  
+_This file was generated by [verb-generate-readme](https://github.com/verbose/verb-generate-readme), v0.6.0, on May 20, 2017._  
 _Project scaffolded using [charlike][] cli._
 
 [always-done]: https://github.com/hybridables/always-done
 [async-done]: https://github.com/gulpjs/async-done
 [base]: https://github.com/node-base/base
-[charlike]: https://github.com/tunnckocore/charlike
+[charlike]: https://github.com/tunnckoCore/charlike
 [commitizen]: https://github.com/commitizen/cz-cli
 [dezalgo]: https://github.com/npm/dezalgo
 [extend-shallow]: https://github.com/jonschlinkert/extend-shallow
 [once]: https://github.com/isaacs/once
 [standard-version]: https://github.com/conventional-changelog/standard-version
-[standard]: http://standardjs.com
+[standard]: https://standardjs.com
 [verb-generate-readme]: https://github.com/verbose/verb-generate-readme
 [verb]: https://github.com/verbose/verb
 
@@ -1138,4 +1154,16 @@ _Project scaffolded using [charlike][] cli._
 
 [apm-url]: https://atom.io/packages/modern-javascript-snippets
 [apm-img]: https://img.shields.io/apm/v/modern-javascript-snippets.svg
+
+[vscode-version-url]: https://marketplace.visualstudio.com/items?itemName=tunnckocore.modern-javascript-snippets
+[vscode-version-img]: http://vsmarketplacebadge.apphb.com/version-short/tunnckocore.modern-javascript-snippets.svg
+
+[vscode-installs-url]: https://marketplace.visualstudio.com/items?itemName=tunnckocore.modern-javascript-snippets
+[vscode-installs-img]: http://vsmarketplacebadge.apphb.com/installs-short/tunnckocore.modern-javascript-snippets.svg
+
+[czfriendly-url]: http://commitizen.github.io/cz-cli
+[czfriendly-img]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
+
+[gkfriendly-url]: https://greenkeeper.io/
+[gkfriendly-img]: https://img.shields.io/badge/greenkeeper-friendly-brightgreen.svg
 

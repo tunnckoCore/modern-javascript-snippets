@@ -1,0 +1,682 @@
+{
+  "assertStrictEqual": {
+    "prefix": "ase",
+    "body": "${1:assert}.strictEqual(${2:actual}, ${3:expected})${0}",
+    "description": "assert.strictEqual"
+  },
+  "assertNotStrictEqual": {
+    "prefix": "asn",
+    "body": "${1:assert}.notStrictEqual(${2:actual}, ${3:expected})${0}",
+    "description": "assert.notStrictEqual"
+  },
+  "assertDeepStrictEqual": {
+    "prefix": "asd",
+    "body": "${1:assert}.deepStrictEqual(${2:actual}, ${3:expected})${0}",
+    "description": "assert.deepStrictEqual"
+  },
+  "assertNotDeepStrictEqual": {
+    "prefix": "asdn",
+    "body": "${1:assert}.notDeepStrictEqual(${2:actual}, ${3:expected})${0}",
+    "description": "assert.notDeepStrictEqual"
+  },
+  "assertIfError": {
+    "prefix": "asi",
+    "body": "${1:assert}.ifError(${2:err})${0}",
+    "description": "assert.ifError"
+  },
+  "assertThrows": {
+    "prefix": "ast",
+    "body": "${1:assert}.throws(${2:actual}, ${3:expected})${0}",
+    "description": "assert.throws"
+  },
+  "nodeCallback": {
+    "prefix": "cb",
+    "body": "(err, ${1:value}) => {${0}}",
+    "description": "Node callback"
+  },
+  "promiseConstructor": {
+    "prefix": "p",
+    "body": "new Promise((resolve${1:, reject}) => {\n  ${0}\n})",
+    "description": "Promise constructor"
+  },
+  "promiseThen": {
+    "prefix": "then",
+    "body": "${1:promise}.then((${2:value}) => {${0}})",
+    "description": "Promise.then"
+  },
+  "chainThen": {
+    "prefix": ".then",
+    "body": ".then((${1:value}) => {${0}})",
+    "description": "chain then"
+  },
+  "promiseCatch": {
+    "prefix": "catch",
+    "body": "${1:promise}.catch((${2:err}) => {${0}})",
+    "description": "Promise.catch"
+  },
+  "chainCatch": {
+    "prefix": ".catch",
+    "body": ".catch((${1:err}) => {${0}})",
+    "description": "chain catch"
+  },
+  "class": {
+    "prefix": "cs",
+    "body": "class ${1:ClassName} {\n  constructor (${2:args}) {\n    ${3}\n  }\n}",
+    "description": "class"
+  },
+  "classExtends": {
+    "prefix": "csx",
+    "body": "class ${1:ClassName} extends ${2:BaseClass} {\n  constructor (${3:args}) {\n    super(${3:args})\n    ${4}\n  }\n}",
+    "description": "class extends"
+  },
+  "classMethod": {
+    "prefix": "csm",
+    "body": "${1:name} (${2:args}) {\n  ${3}\n}",
+    "description": "class method"
+  },
+  "es5SingletonClass": {
+    "prefix": "csi",
+    "body": "function ${1:ClassName} (${2:args}) {\n  if (!(this instanceof ${1:ClassName})) {\n    return new ${1:ClassName}(${2:args})\n  }\n  ${3}\n}",
+    "description": "es5 singleton class"
+  },
+  "es5FunctionClass": {
+    "prefix": "csf",
+    "body": "function ${1:ClassName} (${2:args}) {\n  ${3}\n}",
+    "description": "es5 function class"
+  },
+  "consoleLog": {
+    "prefix": "cl",
+    "body": "console.log(${0})",
+    "description": "console.log"
+  },
+  "consoleError": {
+    "prefix": "ce",
+    "body": "console.error(${0})",
+    "description": "console.error"
+  },
+  "consoleWarn": {
+    "prefix": "cw",
+    "body": "console.warn(${0})",
+    "description": "console.warn"
+  },
+  "consoleDir": {
+    "prefix": "cd",
+    "body": "console.dir(${0})",
+    "description": "console.dir"
+  },
+  "ifStatement": {
+    "prefix": "if",
+    "body": "if (${1:condition}) {\n  ${2}\n}",
+    "description": "if statement"
+  },
+  "elseStatement": {
+    "prefix": "el",
+    "body": "else {\n  ${1}\n}",
+    "description": "else statement"
+  },
+  "if/elseStatement": {
+    "prefix": "ife",
+    "body": "if (${1:condition}) {\n  ${2}\n} else {\n  ${3}\n}",
+    "description": "if/else statement"
+  },
+  "elseIfStatement": {
+    "prefix": "ei",
+    "body": "else if (${1:condition}) {\n  ${2}\n}",
+    "description": "else if statement"
+  },
+  "try/catch": {
+    "prefix": "tc",
+    "body": "try {\n  ${1}\n} catch (${2:err}) {\n  ${3}\n}",
+    "description": "try/catch"
+  },
+  "try/finally": {
+    "prefix": "tf",
+    "body": "try {\n  ${1}\n} finally {\n  ${2}\n}",
+    "description": "try/finally"
+  },
+  "try/catch/finally": {
+    "prefix": "tcf",
+    "body": "try {\n  ${1}\n} catch (${2:err}) {\n  ${3}\n} finally {\n  ${4}\n}",
+    "description": "try/catch/finally"
+  },
+  "varStatement": {
+    "prefix": "v",
+    "body": "var ${1:name}",
+    "description": "var statement"
+  },
+  "varAssignment": {
+    "prefix": "v=",
+    "body": "var ${1:name} = ${2:value}",
+    "description": "var assignment"
+  },
+  "letStatement": {
+    "prefix": "l",
+    "body": "let ${1:name}",
+    "description": "let statement"
+  },
+  "letAssignment": {
+    "prefix": "l=",
+    "body": "let ${1:name} = ${2:value}",
+    "description": "let assignment"
+  },
+  "constStatement": {
+    "prefix": "c",
+    "body": "const ${1:name}",
+    "description": "const statement"
+  },
+  "constAssignment": {
+    "prefix": "c=",
+    "body": "const ${1:name} = ${2:value}",
+    "description": "const assignment"
+  },
+  "constYielded": {
+    "prefix": "cy",
+    "body": "const ${1:name} = yield ${2:value}",
+    "description": "const yielded"
+  },
+  "constAwaited": {
+    "prefix": "ca",
+    "body": "const ${1:name} = await ${2:value}",
+    "description": "const awaited"
+  },
+  "letYielded": {
+    "prefix": "ly",
+    "body": "let ${1:name} = yield ${2:value}",
+    "description": "let yielded"
+  },
+  "letAwaited": {
+    "prefix": "la",
+    "body": "let ${1:name} = await ${2:value}",
+    "description": "let awaited"
+  },
+  "constObject": {
+    "prefix": "co",
+    "body": "const ${1:name} = {\n  ${2}\n}",
+    "description": "const object"
+  },
+  "constArray": {
+    "prefix": "ca",
+    "body": "const ${1:name} = [\n  ${2}\n]",
+    "description": "const array"
+  },
+  "onEventHandler": {
+    "prefix": "on",
+    "body": "${1:emitter}.on('${2:event}', ${3:args})",
+    "description": "on event handler"
+  },
+  "chainOn": {
+    "prefix": ".on",
+    "body": ".on('${1:event}', ${2:handler})",
+    "description": "chain .on"
+  },
+  "onceEventHandler": {
+    "prefix": "once",
+    "body": "${1:emitter}.once('${2:event}', ${3:args})",
+    "description": "once event handler"
+  },
+  "chainOnce": {
+    "prefix": ".once",
+    "body": ".once('${1:event}', ${2:handler})",
+    "description": "chain .once"
+  },
+  "emitEvent": {
+    "prefix": "emit",
+    "body": "${1:emitter}.emit('${2:event}', ${3:args})",
+    "description": "emit event"
+  },
+  "chainEmit": {
+    "prefix": ".emit",
+    "body": ".emit('${1:event}', ${2:args})",
+    "description": "chain .emit"
+  },
+  "anonymousFunction": {
+    "prefix": "f",
+    "body": "function (${1:args}) {${0}}",
+    "description": "anonymous function"
+  },
+  "namedFunction": {
+    "prefix": "fn",
+    "body": "function ${1:name} (${2:args}) {${0}}",
+    "description": "named function"
+  },
+  "asyncAnonymousFunction": {
+    "prefix": "asf",
+    "body": "async function (${1:args}) {${0}}",
+    "description": "async anonymous function"
+  },
+  "asyncNamedFunction": {
+    "prefix": "asfn",
+    "body": "async function ${1:name} (${2:args}) {${0}}",
+    "description": "async named function"
+  },
+  "arrowFunction": {
+    "prefix": "af",
+    "body": "(${1:args}) => ${2:statement}",
+    "description": "arrow function"
+  },
+  "arrowFnWithBody": {
+    "prefix": "afn",
+    "body": "(${1:args}) => {${0}}",
+    "description": "arrow fn with body"
+  },
+  "generator": {
+    "prefix": "gf",
+    "body": "function * (${1:args}) {${0}}",
+    "description": "generator"
+  },
+  "namedGenerator": {
+    "prefix": "gfn",
+    "body": "function * ${1:name} (${2:args}) {${0}}",
+    "description": "named generator"
+  },
+  "immediatelyInvokedFunctionExpression": {
+    "prefix": "iife",
+    "body": ";(function (${1:args}) {\n  ${0}\n})(${2})",
+    "description": "immediately-invoked function expression"
+  },
+  "functionApply": {
+    "prefix": "fa",
+    "body": "${1:fn}.apply(${2:this}, ${3:args})",
+    "description": "function apply"
+  },
+  "functionCall": {
+    "prefix": "fc",
+    "body": "${1:fn}.call(${2:this}, ${3:args})",
+    "description": "function call"
+  },
+  "functionBind": {
+    "prefix": "fb",
+    "body": "${1:fn}.bind(${2:this}, ${3:args})",
+    "description": "function bind"
+  },
+  "forEachLoop": {
+    "prefix": "fe",
+    "body": "${1:iterable}.forEach(${2:iterator})",
+    "description": "forEach loop"
+  },
+  "chainForEach": {
+    "prefix": ".fe",
+    "body": ".forEach(${1:iterator})",
+    "description": "chain forEach"
+  },
+  "map": {
+    "prefix": "map",
+    "body": "${1:iterable}.map(${2:iterator})",
+    "description": "map"
+  },
+  "chainMap": {
+    "prefix": ".map",
+    "body": ".map(${1:iterator})",
+    "description": "chain map"
+  },
+  "reduce": {
+    "prefix": "reduce",
+    "body": "${1:iterable}.reduce((${2:previous}, ${3:current}) => {\n  ${0}\n}${4:, initial})",
+    "description": "reduce"
+  },
+  "chainReduce": {
+    "prefix": ".reduce",
+    "body": ".reduce((${1:previous}, ${2:current}) => {\n  ${0}\n}${3:, initial})",
+    "description": "chain reduce"
+  },
+  "filter": {
+    "prefix": "filter",
+    "body": "${1:iterable}.filter(${2:iterator})",
+    "description": "filter"
+  },
+  "chainFilter": {
+    "prefix": ".filter",
+    "body": ".filter(${1:iterator})",
+    "description": "chain filter"
+  },
+  "find": {
+    "prefix": "find",
+    "body": "${1:iterable}.find(${2:iterator})",
+    "description": "find"
+  },
+  "chainFind": {
+    "prefix": ".find",
+    "body": ".find(${1:iterator})",
+    "description": "chain find"
+  },
+  "every": {
+    "prefix": "every",
+    "body": "${1:iterable}.every(${2:iterator})",
+    "description": "every"
+  },
+  "chainEvery": {
+    "prefix": ".every",
+    "body": ".every(${1:iterator})",
+    "description": "chain every"
+  },
+  "some": {
+    "prefix": "some",
+    "body": "${1:iterable}.some(${2:iterator})",
+    "description": "some"
+  },
+  "chainSome": {
+    "prefix": ".some",
+    "body": ".some(${1:iterator})",
+    "description": "chain some"
+  },
+  "jsonKey/valuePair": {
+    "prefix": ";",
+    "body": "\"${1:key}\": \"${2:value}\"",
+    "description": "JSON key/value pair"
+  },
+  "jsonArray": {
+    "prefix": ";a",
+    "body": "\"${1:key}\": [\"${2:values}\"]",
+    "description": "JSON array"
+  },
+  "jsonTrue": {
+    "prefix": ";t",
+    "body": "\"${1:key}\": true",
+    "description": "JSON true"
+  },
+  "forLoop": {
+    "prefix": "fl",
+    "body": "for (let ${1:i} = 0; ${1:i} < ${2:iterable}${3:.length}; ${1:i}++) {\n  ${4}\n}",
+    "description": "for loop"
+  },
+  "forInLoop": {
+    "prefix": "fi",
+    "body": "for (let ${1:key} in ${2:source}) {\n  if (${2:source}.hasOwnProperty(${1:key})) {\n    ${3}\n  }\n}",
+    "description": "for in loop"
+  },
+  "forOfLoop": {
+    "prefix": "fo",
+    "body": "for (let ${1:key} of ${2:source}) {\n  ${3}\n}",
+    "description": "for of loop"
+  },
+  "whileLoop": {
+    "prefix": "wl",
+    "body": "while (${1:condition}) {\n  ${2}\n}",
+    "description": "while loop"
+  },
+  "fastWhileLoop": {
+    "prefix": "wf",
+    "body": "let len = ${1:iterable}.length\nlet i = 0\n\nwhile (i < len) {\n  let val = ${1:iterable}[${2:i++}]\n  ${0}\n}",
+    "description": "fast while loop"
+  },
+  "useStrict": {
+    "prefix": "us",
+    "body": "'use strict'",
+    "description": "use strict"
+  },
+  "constSelfThis": {
+    "prefix": "self",
+    "body": "const self = this",
+    "description": "const self this"
+  },
+  "yield": {
+    "prefix": "ye",
+    "body": "yield ${0}",
+    "description": "yield"
+  },
+  "await": {
+    "prefix": "aw",
+    "body": "await ${0}",
+    "description": "await"
+  },
+  "processExit": {
+    "prefix": "pe",
+    "body": "process.exit(${1:code})${0}",
+    "description": "process.exit"
+  },
+  "throwNewError": {
+    "prefix": "thn",
+    "body": "throw new ${1:TypeError}('${2:message}')${3}",
+    "description": "throw new error"
+  },
+  "ifNotTypeofThenThrowError": {
+    "prefix": "iferr",
+    "body": "if (typeof ${1:actual} !== ${2:expected}) {\n  throw new ${3:TypeError}('${4:message}')\n}${5}",
+    "description": "if not typeof then throw error"
+  },
+  "jsonStringify": {
+    "prefix": "js",
+    "body": "JSON.stringify($0)",
+    "description": "JSON.stringify()"
+  },
+  "jsonParse": {
+    "prefix": "jp",
+    "body": "JSON.parse($0)",
+    "description": "JSON.parse()"
+  },
+  "arrayify": {
+    "prefix": "afi",
+    "body": "/* istanbul ignore next */\nconst arrayify = (val) => {\n  if (!val) return []\n  if (Array.isArray(val)) return val\n  return [val]\n}",
+    "description": "arrayify"
+  },
+  "fixture usefulForAssertThrows": {
+    "prefix": "fixture",
+    "body": "function fixture () {\n  ${1:fnName}\n}${0}",
+    "description": "fixture (useful for assert.throws)"
+  },
+  "requireModule": {
+    "prefix": "req",
+    "body": "require('${1:pkg}')${0}",
+    "description": "require module"
+  },
+  "constRequirePackage": {
+    "prefix": "rr",
+    "body": "const ${2:name} = require('${1:pkg}')${0}",
+    "description": "const require package"
+  },
+  "exportsMember": {
+    "prefix": "em",
+    "body": "exports.${1:member} = ${2:value}",
+    "description": "exports.member"
+  },
+  "exportsDefault": {
+    "prefix": "emd",
+    "body": "exports['default'] = ${1:value}",
+    "description": "exports default"
+  },
+  "moduleExports": {
+    "prefix": "me",
+    "body": "module.exports = ${1:value}",
+    "description": "module.exports"
+  },
+  "moduleExportsAndExportsDefault": {
+    "prefix": "med",
+    "body": "module.exports = exports['default'] = ${1:value}",
+    "description": "module exports and exports default"
+  },
+  "moduleExport": {
+    "prefix": "ex",
+    "body": "export ${1:member}",
+    "description": "module export"
+  },
+  "moduleDefaultExport": {
+    "prefix": "exd",
+    "body": "export default ${1:member}",
+    "description": "module default export"
+  },
+  "importModule": {
+    "prefix": "im",
+    "body": "import ${2:name} from '${1:pkg}'${3}",
+    "description": "import module"
+  },
+  "importModuleAs": {
+    "prefix": "ima",
+    "body": "import ${2:*} as ${3:name} from '${1:pkg}'${4}",
+    "description": "import module as"
+  },
+  "importModuleDestructured": {
+    "prefix": "imd",
+    "body": "import { $2 } from '${1:pkg}'${3}",
+    "description": "import module destructured"
+  },
+  "key/valuePair": {
+    "prefix": "kv",
+    "body": "${1:key}: ${2:'value'}",
+    "description": "key/value pair"
+  },
+  "prototypeMethod": {
+    "prefix": "proto",
+    "body": "${1:ClassName}.prototype.${2:key} = ${3:value}",
+    "description": "prototype method"
+  },
+  "chainPrototypeMethod": {
+    "prefix": ".proto",
+    "body": ".prototype.${2:key} = ${3:value}",
+    "description": "chain prototype method"
+  },
+  "extendShallow": {
+    "prefix": "xa",
+    "body": "extend(${1:defaults}, ${2:sources})${0}",
+    "description": "extend-shallow"
+  },
+  "objectAssign": {
+    "prefix": "oa",
+    "body": "Object.assign(${1:dest}, ${2:source})${0}",
+    "description": "Object.assign"
+  },
+  "objectKeys": {
+    "prefix": "ok",
+    "body": "Object.keys(${1:obj})${0}",
+    "description": "Object.keys"
+  },
+  "return": {
+    "prefix": "r",
+    "body": "return ${0}",
+    "description": "return"
+  },
+  "returnThis": {
+    "prefix": "rth",
+    "body": "return this",
+    "description": "return this"
+  },
+  "returnNull": {
+    "prefix": "rn",
+    "body": "return null",
+    "description": "return null"
+  },
+  "returnTrue": {
+    "prefix": "rt",
+    "body": "return true",
+    "description": "return true"
+  },
+  "returnFalse": {
+    "prefix": "rf",
+    "body": "return false",
+    "description": "return false"
+  },
+  "return0": {
+    "prefix": "r0",
+    "body": "return 0",
+    "description": "return 0"
+  },
+  "return1": {
+    "prefix": "r-1",
+    "body": "return -1",
+    "description": "return -1"
+  },
+  "returnPromise": {
+    "prefix": "rp",
+    "body": "return new Promise((resolve${1:, reject}) => {\n  ${0}\n})",
+    "description": "return promise"
+  },
+  "asyncTest mocha/mukla": {
+    "prefix": "ita",
+    "body": "${1:it}('${2:description}', (${3:done}) => {\n  ${0}\n})",
+    "description": "async test (mocha/mukla)"
+  },
+  "synchronousTest mocha/mukla": {
+    "prefix": "its",
+    "body": "${1:it}('${2:description}', () => {\n  ${0}\n})",
+    "description": "synchronous test (mocha/mukla)"
+  },
+  "tapeStyleTest": {
+    "prefix": "te",
+    "body": "${1:test}('${2:description}', (${3:t}) => {\n  ${0}\n})",
+    "description": "tape-style test"
+  },
+  "setTimeout": {
+    "prefix": "st",
+    "body": "setTimeout(() => {\n  ${0}\n}, ${1:delay})",
+    "description": "setTimeout"
+  },
+  "processNextTick": {
+    "prefix": "nt",
+    "body": "process.nextTick(() => {\n  ${0}\n}${1:, args})",
+    "description": "process.nextTick"
+  },
+  "setInterval": {
+    "prefix": "si",
+    "body": "setInterval(() => {\n  ${0}\n}, ${1:delay})",
+    "description": "setInterval"
+  },
+  "setImmediate": {
+    "prefix": "sim",
+    "body": "setImmediate(() => {\n  ${0}\n})",
+    "description": "setImmediate"
+  },
+  "string": {
+    "prefix": "S",
+    "body": "String",
+    "description": "String"
+  },
+  "symbol": {
+    "prefix": "Sy",
+    "body": "Symbol('${1:name}')",
+    "description": "Symbol"
+  },
+  "boolean": {
+    "prefix": "B",
+    "body": "Boolean",
+    "description": "Boolean"
+  },
+  "number": {
+    "prefix": "N",
+    "body": "Number",
+    "description": "Number"
+  },
+  "object": {
+    "prefix": "O",
+    "body": "Object",
+    "description": "Object"
+  },
+  "array": {
+    "prefix": "A",
+    "body": "Array",
+    "description": "Array"
+  },
+  "date": {
+    "prefix": "D",
+    "body": "Date",
+    "description": "Date"
+  },
+  "regExp": {
+    "prefix": "Rx",
+    "body": "RegExp",
+    "description": "RegExp"
+  },
+  "promise": {
+    "prefix": "P",
+    "body": "Promise",
+    "description": "Promise"
+  },
+  "typeofEqualTo": {
+    "prefix": "tof",
+    "body": "typeof ${1:source} === '${2:value}'",
+    "description": "typeof equal to"
+  },
+  "typeofNotEqualTo": {
+    "prefix": "tofi",
+    "body": "typeof ${1:source} !== '${2:value}'",
+    "description": "typeof not equal to"
+  },
+  "instanceof": {
+    "prefix": "iof",
+    "body": "${1:source} instanceof ${2:Object}",
+    "description": "instanceof"
+  },
+  "arrayIsArray": {
+    "prefix": "ia",
+    "body": "Array.isArray(${1:source})",
+    "description": "Array.isArray()"
+  }
+}
